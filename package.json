@@ -1,8 +1,8 @@
 {
-  "name": "mesto",
+  "name": "news-analyzer",
   "version": "0.0.1",
-  "description": "Interactive service about interesting places in Russia",
-  "main": "script.js",
+  "description": "News service",
+  "main": "index.js",
   "scripts": {
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EvgeniyL0/Mesto.git"
+    "url": "git+https://github.com/EvgeniyL0/NewsAnalyzer.git"
   },
   "keywords": [],
   "author": "Evgeniy Lobanov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EvgeniyL0/Mesto/issues"
+    "url": "https://github.com/EvgeniyL0/NewsAnalyzer/issues"
   },
-  "homepage": "https://github.com/EvgeniyL0/Mesto#readme",
+  "homepage": "https://github.com/EvgeniyL0/NewsAnalyzer#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.6",
