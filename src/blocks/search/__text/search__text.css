@@ -1,0 +1,9 @@
+.search__text {
+  max-width: 545px;
+  margin-left: auto;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 64px;
+  font-size: 18px;
+  line-height: 24px;
+}

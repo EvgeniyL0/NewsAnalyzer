@@ -2,5 +2,6 @@
 
 .root {
   min-width: 100vh;
-  font-family: 'Roboto';
+  font-family: 'Source Sans Pro';
+  font-style: normal;
 }

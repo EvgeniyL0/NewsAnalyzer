@@ -1,0 +1,8 @@
+@import url(./_header/content-title_header.css);
+@import url(./_search/content-title_search.css);
+
+.content-title {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+}

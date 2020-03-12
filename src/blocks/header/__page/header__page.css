@@ -1,0 +1,13 @@
+@import url(./_current/header__page_current.css);
+
+.header__page {
+  padding-bottom: 27px;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: white;
+}
+
+.header__page:last-of-type {
+  margin-left: 34px;
+}
