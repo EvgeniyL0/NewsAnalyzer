@@ -1,0 +1,6 @@
+.results__empty {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}

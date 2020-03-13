@@ -1,10 +1,11 @@
 .search__input {
-  width: 440px;
+  width: calc(100% - 168px);
   padding-left: 24px;
   padding-top: 21px;
   padding-bottom: 21px;
   border: 1px solid #D1D2D6;
-  border-radius: 100px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
   font-size: 16px;
   line-height: 22px;
 }

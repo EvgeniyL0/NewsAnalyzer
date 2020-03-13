@@ -1,0 +1,10 @@
+.results__text {
+    max-width: 356px;
+    margin-right: auto;
+    margin-top: 0;
+    margin-left: auto;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+}
