@@ -3,6 +3,7 @@
 @import url(./_results/content-title_results.css);
 @import url(./_empty/content-title_empty.css);
 @import url(./_card/content-title_card.css);
+@import url(./_author/content-title_author.css);
 
 .content-title {
   font-family: 'Roboto Slab';

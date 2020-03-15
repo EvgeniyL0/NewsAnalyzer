@@ -1,9 +1,10 @@
-@import url(./__date/card__date.css);
 @import url(./__image/card__image.css);
-@import url(./__source/card__source.css);
+@import url(./__description/card__description.css);
+@import url(./__date/card__date.css);
 @import url(./__text/card__text.css);
+@import url(./__source/card__source.css);
 
 .card {
-    width: 400px;
     border-radius: 16px;
+    background-color: white;
 }

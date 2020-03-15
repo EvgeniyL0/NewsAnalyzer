@@ -1,0 +1,13 @@
+@import url(./__photo/author__photo.css);
+@import url(./__text/author__text.css);
+
+.author {
+  width: 85%;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: start;
+  color: #1A1B22;
+}

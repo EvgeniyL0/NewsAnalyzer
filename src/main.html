@@ -26,7 +26,7 @@
         прошедшую неделю.</p>
       <form class="search__form" name="" novalidate>
         <input type="text" class="search__input" placeholder="Введите тему новости">
-        <button type="submit" class="search__button">Искать</button>
+        <button type="submit" class="button button_search">Искать</button>
       </form>
     </div>
     <div class="results">
@@ -37,23 +37,67 @@
         </div>
         <div class="results__news-cards">
           <div class="card">
-            <div class="card__image"></div>
-            <p class="card__date">2 августа, 2019</p>
-            <h3 class="content-title content-title_card">Национальное достояние - парки</h3>
-            <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-              система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            <p class="card__source">ЛЕНТА.РУ</p>
+            <img src="./images/sample.jpg" alt="" class="card__image">
+            <div class="card__description">
+              <p class="card__date">2 августа, 2019</p>
+              <h3 class="content-title content-title_card">Национальное достояние - парки</h3>
+              <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+                система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+              </p>
+              <p class="card__source">ЛЕНТА.РУ</p>
+            </div>
           </div>
-          <div class="card"></div>
-          <div class="card"></div>
+          <div class="card">
+            <img src="./images/sample.jpg" alt="" class="card__image">
+            <div class="card__description">
+              <p class="card__date">2 августа, 2019</p>
+              <h3 class="content-title content-title_card">Лесные огоньки: история одной фотографии</h3>
+              <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы
+                запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+              <p class="card__source">МЕДУЗА</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./images/sample.jpg" alt="" class="card__image">
+            <div class="card__description">
+              <p class="card__date">2 августа, 2019</p>
+              <h3 class="content-title content-title_card">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+              <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
+                необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+              <p class="card__source">РИА</p>
+            </div>
+          </div>
         </div>
+        <button type="submit" class="button button_more">Показать ещё</button>
       </div>
       <div class="results__empty">
         <img src="./images/not-found.svg" alt="Sad smile">
         <h2 class="content-title content-title_empty">Ничего не найдено</h2>
         <p class="results__text">К сожалению по вашему запросу ничего не найдено</p>
       </div>
-
+    </div>
+    <div class="author">
+      <div class="author__photo"></div>
+      <div class="author__about">
+        <h2 class="content-title content-title_author">Об авторе</h2>
+        <p class="author__text">Это блок с описаением автора проекта.</p>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="footer__copyright">&copy; 2020 Supersite</p>
+      <menu class="menu">
+        <a href="" class="menu__link">Главная</a>
+        <a href="" class="menu__link">О проекте</a>
+        <a href="" class="menu__link">Яндекс.Практикум</a>
+      </menu>
+      <div class="footer__social">
+        <a href="" class="footer__link">
+          <img src="./images/github-icon.svg" alt="Github icon" class="footer__social-icon">
+        </a>
+        <a href="" class="footer__link">
+          <img src="./images/fb-icon.svg" alt="Facebook icon" class="footer__social-icon">
+        </a>
+      </div>
     </div>
   </div>
 

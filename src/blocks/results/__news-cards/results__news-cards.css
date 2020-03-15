@@ -1,4 +1,7 @@
 .results__news-cards {
-    width: 85%;
+    margin-bottom: 64px;
     display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-gap: 16px;
+    justify-content: center;
 }
