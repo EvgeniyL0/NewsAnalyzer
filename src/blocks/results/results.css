@@ -2,8 +2,10 @@
 @import url(./__header/results__header.css);
 @import url(./__page-link/results__page-link.css);
 @import url(./__news-cards/results__news-cards.css);
+@import url(./__load/results__load.css);
 @import url(./__empty/results__empty.css);
 @import url(./__text/results__text.css);
+@import url(./__loader/results__loader.css);
 
 .results {
     width: 100%;

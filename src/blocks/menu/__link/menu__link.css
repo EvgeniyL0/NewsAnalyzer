@@ -1,0 +1,11 @@
+.menu__link {
+    margin-right: 40px;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #1A1B22;
+}
+
+.menu__link:last-of-type {
+    margin-right: 0;
+}
