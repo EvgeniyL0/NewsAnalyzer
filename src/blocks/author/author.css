@@ -1,5 +1,5 @@
+@import url(./__about-text/author__about-text.css);
 @import url(./__photo/author__photo.css);
-@import url(./__text/author__text.css);
 
 .author {
   width: 85%;

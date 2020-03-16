@@ -1,9 +1,9 @@
-@import url(./_header/content-title_header.css);
-@import url(./_search/content-title_search.css);
-@import url(./_results/content-title_results.css);
-@import url(./_empty/content-title_empty.css);
-@import url(./_card/content-title_card.css);
 @import url(./_author/content-title_author.css);
+@import url(./_card/content-title_card.css);
+@import url(./_empty/content-title_empty.css);
+@import url(./_header/content-title_header.css);
+@import url(./_results/content-title_results.css);
+@import url(./_search/content-title_search.css);
 
 .content-title {
   font-family: 'Roboto Slab';

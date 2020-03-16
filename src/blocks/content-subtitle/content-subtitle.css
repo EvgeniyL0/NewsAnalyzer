@@ -1,0 +1,10 @@
+@import url(./_results/content-subtitle_results.css);
+@import url(./_search/content-subtitle_search.css);
+
+.content-subtitle {
+  margin-right: auto;
+  margin-top: 0;
+  margin-left: auto;
+  font-size: 18px;
+  line-height: 24px;
+}

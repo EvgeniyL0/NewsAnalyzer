@@ -1,5 +1,5 @@
-@import url(./_search/button_search.css);
 @import url(./_more/button_more.css);
+@import url(./_search/button_search.css);
 
 .button {
   height: 64px;

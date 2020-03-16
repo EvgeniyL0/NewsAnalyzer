@@ -8,7 +8,7 @@
   <meta name="author" content="Evgeniy Lobanov">
   <title>NewsAnalyzer</title>
   <link rel="icon" type="image/png" href="./images/favicon.png" />
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="./pages/main.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         </div>
       </div>
       <h1 class="content-title content-title_search">Что в мире творится?</h1>
-      <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
+      <p class="content-subtitle content-subtitle_search">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
         прошедшую неделю.</p>
       <form class="search__form" name="" novalidate>
         <input type="text" class="search__input" placeholder="Введите тему новости">
@@ -32,7 +32,7 @@
     <div class="results">
       <div class="results__load">
         <div class="results__loader"></div>
-        <p class="results__text">Идёт поиск новостей...</p>
+        <p class="content-subtitle content-subtitle_results">Идёт поиск новостей...</p>
       </div>
       <div class="results__content">
         <div class="results__header">
@@ -45,7 +45,7 @@
             <div class="card__description">
               <p class="card__date">2 августа, 2019</p>
               <h3 class="content-title content-title_card">Национальное достояние - парки</h3>
-              <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
+              <p class="card__news-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
                 система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
               </p>
               <p class="card__source">ЛЕНТА.РУ</p>
@@ -56,7 +56,7 @@
             <div class="card__description">
               <p class="card__date">2 августа, 2019</p>
               <h3 class="content-title content-title_card">Лесные огоньки: история одной фотографии</h3>
-              <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы
+              <p class="card__news-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы
                 запечатлеть ускользающую красоту одного из местных чудес природы.</p>
               <p class="card__source">МЕДУЗА</p>
             </div>
@@ -66,7 +66,7 @@
             <div class="card__description">
               <p class="card__date">2 августа, 2019</p>
               <h3 class="content-title content-title_card">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-              <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
+              <p class="card__news-text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
                 необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
               <p class="card__source">РИА</p>
             </div>
@@ -75,16 +75,16 @@
         <button type="submit" class="button button_more">Показать ещё</button>
       </div>
       <div class="results__empty">
-        <img src="./images/not-found.svg" alt="Sad smile">
+        <img src="./images/not-found.svg" alt="Sad smile" class="results__not-found-image">
         <h2 class="content-title content-title_empty">Ничего не найдено</h2>
-        <p class="results__text">К сожалению по вашему запросу ничего не найдено</p>
+        <p class="content-subtitle content-subtitle_results">К сожалению по вашему запросу ничего не найдено</p>
       </div>
     </div>
     <div class="author">
       <div class="author__photo"></div>
       <div class="author__about">
         <h2 class="content-title content-title_author">Об авторе</h2>
-        <p class="author__text">Это блок с описаением автора проекта.</p>
+        <p class="author__about-text">Это блок с описаением автора проекта.</p>
       </div>
     </div>
     <div class="footer">
