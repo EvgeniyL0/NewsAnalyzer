@@ -2,9 +2,10 @@
 @import url(./__page-links/header__page-links.css);
 
 .header {
-  width: 100%;
+  width: 85%;
   min-height: 80px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid  rgba(196, 196, 196, 0.1);
 }

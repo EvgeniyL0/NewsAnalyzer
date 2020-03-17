@@ -1,11 +1,12 @@
 @import url(./_current/header__page_current.css);
+@import url(./_theme/header__page_theme_dark.css);
+@import url(./_theme/header__page_theme_light.css);
 
 .header__page {
   padding-bottom: 27px;
   font-size: 18px;
   line-height: 24px;
   text-decoration: none;
-  color: white;
 }
 
 .header__page:last-of-type {

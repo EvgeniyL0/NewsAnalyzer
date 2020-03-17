@@ -1,0 +1,6 @@
+.diagram__columns {
+    display: flex;
+    font-size: 12px;
+    line-height: 16px;
+    border-bottom: 1px solid #1A1B22;  
+}

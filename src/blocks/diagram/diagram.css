@@ -1,0 +1,11 @@
+@import url(./__bar/diagram__bar.css);
+@import url(./__columns/diagram__columns.css);
+@import url(./__date/diagram__date.css);
+@import url(./__row/diagram__row.css);
+@import url(./__scale/diagram__scale.css);
+
+.diagram {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
