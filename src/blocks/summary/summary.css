@@ -1,12 +1,13 @@
 @import url(./__content/summary__content.css);
 @import url(./__content-text/summary__content-text.css);
-@import url(./__navigation-path/summary__navigation-path.css);
+@import url(./__current-page/summary__current-page.css);
+@import url(./__main-page-link/summary__main-page-link.css);
 @import url(./__number-of-news/summary__number-of-news.css);
 @import url(./__number-of-references.css/summary__number-of-references.css);
+@import url(./__path/summary__path.css);
 
 .summary {
     width: 100%;
     padding-bottom: 80px;
-    background-color: white;
     color: #1A1B22;
 }

@@ -1,5 +1,15 @@
+@import url(./_day/diagram__bar_day_mon.css);
+@import url(./_day/diagram__bar_day_tue.css);
+@import url(./_day/diagram__bar_day_wed.css);
+@import url(./_day/diagram__bar_day_thu.css);
+@import url(./_day/diagram__bar_day_fri.css);
+@import url(./_day/diagram__bar_day_sat.css);
+@import url(./_day/diagram__bar_day_sun.css);
+
 .diagram__bar {
     width: 100px;
     margin: 0;
+    padding-left: 6px;
     background-color: #2F71E5;
+    color: white;
 }
