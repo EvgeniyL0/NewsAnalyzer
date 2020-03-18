@@ -15,3 +15,9 @@
     letter-spacing: 0.4px; 
     color: #B6BCBF;
 }
+
+@media screen and (max-width: 768px) {
+    .diagram {
+        width: 90%;
+    }
+}

@@ -7,3 +7,9 @@
     font-size: 26px;
     line-height: 30px;
 }
+
+@media screen and (max-width: 768px) {
+    .content-title_details {
+        width: 90%;
+    }
+}

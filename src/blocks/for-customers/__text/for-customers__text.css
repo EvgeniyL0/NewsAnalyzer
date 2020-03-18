@@ -7,3 +7,9 @@
     font-size: 18px;
     line-height: 24px;
 }
+
+@media screen and (max-width: 768px) {
+    .for-customers__text {
+        width: 90%;
+    }
+}

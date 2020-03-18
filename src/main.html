@@ -13,14 +13,14 @@
 
 <body>
   <div class="root">
-    <div class="search">
-      <div class="header">
+    <section class="search">
+      <header class="header">
         <p class="content-title content-title_header">NewsAnalyzer</p>
         <nav class="header__page-links">
           <a href="./main.html" class="header__page header__page_theme_light header__page_current">Главная</a>
           <a href="./about.html" class="header__page header__page_theme_light">О проекте</a>
         </nav>
-      </div>
+      </header>
       <div class="rectangle"></div>
       <h1 class="content-title content-title_search">Что в мире творится?</h1>
       <p class="content-subtitle content-subtitle_search">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за
@@ -29,23 +29,23 @@
         <input type="text" class="search__input" placeholder="Введите тему новости">
         <button type="submit" class="button button_search">Искать</button>
       </form>
-    </div>
-    <div class="results">
+    </section>
+    <section class="results">
       <div class="results__load">
         <div class="loader"></div>
         <p class="content-subtitle content-subtitle_results">Идёт поиск новостей...</p>
       </div>
       <div class="results__list">
-        <div class="results__header">
+        <div class="header">
           <h2 class="content-title content-title_results">Результаты поиска</h2>
-          <a href="./paper.html" class="results__page-link">Посмотреть аналитику &gt;</a>
+          <a href="./paper.html" class="header__link">Посмотреть аналитику &gt;</a>
         </div>
         <div class="results__news-cards">
           <div class="card">
             <img src="./images/sample.jpg" alt="" class="card__image">
             <div class="card__description">
               <p class="card__date">2 августа, 2019</p>
-              <h3 class="content-title content-title_card">Национальное достояние - парки</h3>
+              <h3 class="card__news-title">Национальное достояние - парки</h3>
               <p class="card__news-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
                 система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
               </p>
@@ -56,7 +56,7 @@
             <img src="./images/sample.jpg" alt="" class="card__image">
             <div class="card__description">
               <p class="card__date">2 августа, 2019</p>
-              <h3 class="content-title content-title_card">Лесные огоньки: история одной фотографии</h3>
+              <h3 class="card__news-title">Лесные огоньки: история одной фотографии</h3>
               <p class="card__news-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы
                 запечатлеть ускользающую красоту одного из местных чудес природы.</p>
               <p class="card__source">МЕДУЗА</p>
@@ -66,7 +66,7 @@
             <img src="./images/sample.jpg" alt="" class="card__image">
             <div class="card__description">
               <p class="card__date">2 августа, 2019</p>
-              <h3 class="content-title content-title_card">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+              <h3 class="card__news-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
               <p class="card__news-text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
                 необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
               <p class="card__source">РИА</p>
@@ -80,15 +80,15 @@
         <h2 class="content-title content-title_empty">Ничего не найдено</h2>
         <p class="content-subtitle content-subtitle_results">К сожалению по вашему запросу ничего не найдено</p>
       </div>
-    </div>
-    <div class="author">
-      <div class="author__photo"></div>
+    </section>
+    <section class="author">
+      <img src="" alt="Author photo" class="author__photo">
       <div class="author__about">
         <h2 class="content-title content-title_author">Об авторе</h2>
         <p class="author__about-text">Это блок с описаением автора проекта.</p>
       </div>
-    </div>
-    <div class="footer">
+    </section>
+    <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Supersite</p>
       <menu class="menu">
         <a href="./main.html" class="menu__link">Главная</a>
@@ -103,9 +103,8 @@
           <img src="./images/fb-icon.svg" alt="Facebook icon" class="footer__social-icon">
         </a>
       </div>
-    </div>
+    </footer>
   </div>
-
 </body>
 
 </html>

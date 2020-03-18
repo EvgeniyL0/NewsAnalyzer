@@ -6,3 +6,9 @@
   background-color: white;
   border-radius: 80px;
 }
+
+@media screen and (max-width: 768px) {
+  .button_more {
+    width: 240px;
+  }
+}

@@ -1,5 +1,4 @@
-@import url(./__header/commits__header.css);
-@import url(./__page-link/commits__page-link.css);
+
 
 .commits {
     width: 100%;
@@ -7,4 +6,11 @@
     padding-bottom: 80px;
     background-color: #F5F6F7;
     color: #1A1B22;
+}
+
+@media screen and (max-widt: 768px) {
+    .commits {
+        padding-top: 40px;
+        padding-bottom: 40px;    
+    }
 }
