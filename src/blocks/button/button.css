@@ -9,3 +9,9 @@
   line-height: 24px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .button {
+    height: 56px;
+  }  
+}

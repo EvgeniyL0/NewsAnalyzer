@@ -8,3 +8,9 @@
   background-size: cover;
   color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .search {
+    padding-bottom: 48px;
+  }
+}

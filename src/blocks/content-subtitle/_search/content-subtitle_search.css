@@ -2,3 +2,10 @@
   max-width: 608px;
   margin-bottom: 64px;
 }
+
+@media screen and (max-width: 768px) {
+  .content-subtitle_search {
+    width: 448px;
+    margin-bottom: 24px;
+  }
+}

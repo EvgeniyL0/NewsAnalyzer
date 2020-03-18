@@ -7,3 +7,15 @@
   font-size: 60px;
   line-height: 64px;
 }
+
+@media screen and (max-width: 768px) {
+  .content-title_search {
+    width: 385px;
+    margin-left: calc((100% - 448px) / 2);
+    margin-top: 40px;
+    margin-right: 0;
+    margin-bottom: 16px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+}

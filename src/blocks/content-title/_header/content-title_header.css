@@ -4,3 +4,10 @@
   font-size: 20px;
   line-height: 24px;
 }
+
+@media screen and (max-width: 768px) {
+  .content-title_header {
+    margin-top: 22px;
+    margin-bottom: 22px;
+  }
+}

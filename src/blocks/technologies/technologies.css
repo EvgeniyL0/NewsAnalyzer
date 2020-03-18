@@ -1,0 +1,13 @@
+@import url(./__content/technologies__content.css);
+@import url(./__image/technologies__image.css);
+@import url(./__item/technologies__item.css);
+@import url(./__list/technologies__list.css);
+@import url(./__name/technologies__name.css);
+
+.technologies {
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #F5F6F7;
+    color: #1A1B22;
+}

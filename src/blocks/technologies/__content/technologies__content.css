@@ -1,7 +1,7 @@
-.results__header {
+.technologies__content {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }

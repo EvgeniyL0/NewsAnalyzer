@@ -1,0 +1,6 @@
+.technologies__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 40px;
+}

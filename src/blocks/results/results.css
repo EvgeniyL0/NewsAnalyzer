@@ -1,7 +1,7 @@
-@import url(./__content/results__content.css);
 @import url(./__empty/results__empty.css);
 @import url(./__header/results__header.css);
 @import url(./__load/results__load.css);
+@import url(./__list/results__list.css);
 @import url(./__news-cards/results__news-cards.css);
 @import url(./__not-found-image/results__not-found-image.css);
 @import url(./__page-link/results__page-link.css);
@@ -12,4 +12,11 @@
     padding-bottom: 80px;
     background-color: #F5F6F7;
     color: #1A1B22;
+}
+
+@media screen and (max-width: 768px) {
+    .results {
+        padding-top: 40px;
+        padding-bottom: 40px;    
+    }    
 }

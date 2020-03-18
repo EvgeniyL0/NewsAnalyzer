@@ -12,3 +12,9 @@
 .header__page:last-of-type {
   margin-left: 34px;
 }
+
+@media screen and (max-width: 768px) {
+  .header__page {
+    padding-bottom: 20px;
+  }
+}
