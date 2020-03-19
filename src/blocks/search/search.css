@@ -2,15 +2,8 @@
 @import url(./__input/search__input.css);
 
 .search {
-  width: 100%;
-  padding-bottom: 80px;
+  padding-top: 0;
   background-image: url(../../images/search-back.png);
   background-size: cover;
   color: white;
-}
-
-@media screen and (max-width: 768px) {
-  .search {
-    padding-bottom: 48px;
-  }
 }

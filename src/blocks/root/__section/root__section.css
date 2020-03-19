@@ -1,0 +1,12 @@
+.root__section {
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .root__section {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}

@@ -4,8 +4,7 @@
 @import url(./__social-icon/footer__social-icon.css);
 
 .footer {
-  width: 85%;
-  min-height: 80px;
+  width: 86%;
   margin-left: auto;
   margin-right: auto;
   display: flex;

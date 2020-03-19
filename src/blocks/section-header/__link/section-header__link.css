@@ -1,4 +1,4 @@
-.header__link {
+.section-header__link {
   margin-top: 20px;
   margin-bottom: 72px;
   font-size: 18px;
@@ -8,7 +8,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .header__link {
+  .section-header__link {
       margin-top: 8px;
       margin-bottom: 34px;
   }

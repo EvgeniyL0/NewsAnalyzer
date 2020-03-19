@@ -1,8 +1,5 @@
 .results__news-cards {
-    width: 86%;
-    margin-left: auto;
     margin-top: 0;
-    margin-right: auto;
     margin-bottom: 64px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 400px);
@@ -12,7 +9,6 @@
 
 @media screen and (max-width: 768px) {
     .results__news-cards {
-        width: 90%;
         margin-bottom: 22px;
         grid-template-columns: repeat(auto-fill, 224px);
         grid-gap: 8px;

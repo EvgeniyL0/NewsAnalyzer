@@ -2,20 +2,7 @@
 @import url(./__photo/author__photo.css);
 
 .author {
-  width: 85%;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   justify-content: start;
   color: #1A1B22;
-}
-
-@media screen and (max-width: 768px) {
-  .author {
-    width: 90%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
 }

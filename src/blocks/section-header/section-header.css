@@ -1,0 +1,6 @@
+@import url(./__link/section-header__link.css);
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+}
