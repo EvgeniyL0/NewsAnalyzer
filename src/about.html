@@ -12,9 +12,9 @@
 
 <body>
     <div class="root">
-        <section class="for-customers">
+        <section class="for-customers root__section">
             <header class="header">
-                <p class="content-title content-title_header">NewsAnalyzer</p>
+                <p class="header__logo">NewsAnalyzer</p>
                 <nav class="header__page-links">
                     <a href="./main.html" class="header__page header__page_theme_dark">Главная</a>
                     <a href="./about.html" class="header__page header__page_theme_dark header__page_current">О
@@ -22,58 +22,70 @@
                 </nav>
             </header>
             <div class="rectangle"></div>
-            <h2 class="content-title content-title_for-customers">Клиентам</h2>
-            <div class="for-customers__text">
-                <p class="for-customers__paragraph">Этот сайт — дипломный проект студента Яндкс.Практикума. Его цель —
-                    показать, чему научился студент, и какими технологиями владеет.</p>
-                <p class="for-customers__paragraph">Вёртска сайта выполнена по методологии БЭМ. Это делает сайт гибким и
-                    масштабируемым. Кроме того, добавлять новые страницы и функциальность проще и быстрее, чем в
-                    проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
-                <p class="for-customers__paragraph">Карточки с новостям приходят с сервера и обрабатываются асихронно.
-                    То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство
-                    использования сервиса.</p>
-                <p class="for-customers__paragraph">При создании проекта была использона сборка технологией Webpack. Это
-                    современных подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также
-                    настроена сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных
-                    систем у них не будет проблем с отображением. А значит потенциальная аудитория возрастает.</p>
-                <p class="for-customers__paragraph">Проект был проверен экспертами Яндекс.Практикума. И если вашему
-                    бизесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
+            <div class="section-content">
+                <h2 class="content-title content-title_for-customers">Клиентам</h2>
+                <div class="for-customers__text">
+                    <p class="for-customers__paragraph">Этот сайт — дипломный проект студента Яндкс.Практикума. Его цель
+                        —
+                        показать, чему научился студент, и какими технологиями владеет.</p>
+                    <p class="for-customers__paragraph">Вёртска сайта выполнена по методологии БЭМ. Это делает сайт
+                        гибким и
+                        масштабируемым. Кроме того, добавлять новые страницы и функциальность проще и быстрее, чем в
+                        проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
+                    <p class="for-customers__paragraph">Карточки с новостям приходят с сервера и обрабатываются
+                        асихронно.
+                        То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство
+                        использования сервиса.</p>
+                    <p class="for-customers__paragraph">При создании проекта была использона сборка технологией Webpack.
+                        Это
+                        современных подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее.
+                        Также
+                        настроена сайт работает в старых браузерах. Даже если посетители — пользователи старых
+                        операционных
+                        систем у них не будет проблем с отображением. А значит потенциальная аудитория возрастает.</p>
+                    <p class="for-customers__paragraph">Проект был проверен экспертами Яндекс.Практикума. И если вашему
+                        бизесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
+                </div>
             </div>
         </section>
-        <section class="technologies">
-            <div class="technologies__content">
+        <section class="technologies root__section">
+            <div class="section-content section-content_tech">
                 <h2 class="content-title content-title_technologies">Используемые технологии</h2>
                 <div class="technologies__list">
                     <div class="technologies__item">
                         <p class="technologies__name">HTML</p>
-                        <img src="./images/html-icon.svg" alt="" class="technologies__image">
+                        <img src="./images/html-icon.svg" alt="HTML icon" class="technologies__image">
                     </div>
                     <div class="technologies__item">
                         <p class="technologies__name">CSS</p>
-                        <img src="./images/css-icon.svg" alt="" class="technologies__image">
+                        <img src="./images/css-icon.svg" alt="CSS icon" class="technologies__image">
                     </div>
                     <div class="technologies__item">
                         <p class="technologies__name">Java Script</p>
-                        <img src="./images/js-icon.svg" alt="" class="technologies__image">
+                        <img src="./images/js-icon.svg" alt="Java Script icon" class="technologies__image">
                     </div>
                     <div class="technologies__item">
                         <p class="technologies__name">Webpack</p>
-                        <img src="./images/webpack-icon.svg" alt="" class="technologies__image">
+                        <img src="./images/webpack-icon.svg" alt="Webpack icon" class="technologies__image">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="author">
-            <img src="" alt="Author photo" class="author__photo">
-            <div class="author__about">
-                <h2 class="content-title content-title_author">Об авторе</h2>
-                <p class="author__about-text">Это блок с описаением автора проекта.</p>
+        <section class="author root__section">
+            <div class="section-content section-content_author">
+                <img src="" alt="Author photo" class="author__photo">
+                <div class="author__about">
+                    <h2 class="content-title content-title_author">Об авторе</h2>
+                    <p class="author__about-text">Это блок с описаением автора проекта.</p>
+                </div>
             </div>
         </section>
-        <section class="commits">
-            <div class="header">
-                <h2 class="content-title content-title_commits">История коммитов из GitHub</h2>
-                <a href="" class="header__link">Открыть в GitHub &gt;</a>
+        <section class="commits root__section">
+            <div class="section-content">
+                <div class="section-header">
+                    <h2 class="content-title content-title_section-header">История коммитов из GitHub</h2>
+                    <a href="" class="section-header__link">Открыть в GitHub &gt;</a>
+                </div>
             </div>
         </section>
         <footer class="footer">

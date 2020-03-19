@@ -2,7 +2,5 @@
 @import url(./__photo/author__photo.css);
 
 .author {
-  display: flex;
-  justify-content: start;
   color: #1A1B22;
 }

@@ -1,16 +1,4 @@
-
-
 .commits {
-    width: 100%;
-    padding-top: 80px;
-    padding-bottom: 80px;
     background-color: #F5F6F7;
     color: #1A1B22;
-}
-
-@media screen and (max-widt: 768px) {
-    .commits {
-        padding-top: 40px;
-        padding-bottom: 40px;    
-    }
 }

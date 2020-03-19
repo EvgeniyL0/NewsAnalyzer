@@ -1,4 +1,3 @@
-@import url(./__content/summary__content.css);
 @import url(./__content-text/summary__content-text.css);
 @import url(./__current-page/summary__current-page.css);
 @import url(./__main-page-link/summary__main-page-link.css);
@@ -7,13 +6,6 @@
 @import url(./__path/summary__path.css);
 
 .summary {
-    width: 100%;
-    padding-bottom: 80px;
+    padding-top: 0;
     color: #1A1B22;
-}
-
-@media screen and (max-width: 768px) {
-    .summary {
-        padding-bottom: 40px;
-    }
 }

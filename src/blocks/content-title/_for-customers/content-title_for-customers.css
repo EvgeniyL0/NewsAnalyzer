@@ -1,8 +1,5 @@
 .content-title_for-customers {
-    width: 85%;
-    margin-left: auto;
     margin-top: 80px;
-    margin-right: auto;
     margin-bottom: 24px;
     font-size: 40px;
     line-height: 46px;
@@ -10,7 +7,6 @@
 
 @media screen and (max-width: 768px) {
     .content-title_for-customers {
-        width: 90%;
         margin-top: 30px;
         margin-bottom: 16px;
         font-size: 30px;

@@ -1,4 +1,5 @@
 @import url(./__bar/diagram__bar.css);
+@import url(./__bar-text/diagram__bar-text.css);
 @import url(./__column-name/diagram__column-name.css);
 @import url(./__columns/diagram__columns.css);
 @import url(./__month/diagram__month.css);
@@ -7,17 +8,8 @@
 @import url(./__scale/diagram__scale.css);
 
 .diagram {
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.4px; 
     color: #B6BCBF;
-}
-
-@media screen and (max-width: 768px) {
-    .diagram {
-        width: 90%;
-    }
 }

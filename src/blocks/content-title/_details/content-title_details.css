@@ -1,15 +1,6 @@
 .content-title_details {
-    width: 85%;
-    margin-left: auto;
     margin-top: 0;
-    margin-right: auto;
     margin-bottom: 48px;
     font-size: 26px;
     line-height: 30px;
-}
-
-@media screen and (max-width: 768px) {
-    .content-title_details {
-        width: 90%;
-    }
 }

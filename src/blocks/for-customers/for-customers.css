@@ -2,13 +2,6 @@
 @import url(./__text/for-customers__text.css);
 
 .for-customers {
-    width: 100%;
-    padding-bottom: 80px;
+    padding-top: 0;
     color: #1A1B22;
-}
-
-@media screen and (max-width: 768px) {
-    .for-customers {
-        padding-bottom: 40px;
-    }
 }
