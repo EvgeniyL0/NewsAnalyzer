@@ -13,3 +13,9 @@
         line-height: 34px;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .content-title_for-customers {
+        margin-top: 16px;
+    }
+}

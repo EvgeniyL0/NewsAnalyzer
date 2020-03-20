@@ -9,3 +9,10 @@
         padding-bottom: 40px;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .root__section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}

@@ -1,3 +1,5 @@
-.footer__social {
-
+@media screen and (max-width: 650px) {
+    .footer__social {
+        order: 2;
+    }
 }

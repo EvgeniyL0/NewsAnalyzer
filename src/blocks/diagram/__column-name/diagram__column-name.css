@@ -2,3 +2,9 @@
   min-width: 104px;
   margin: 0;
 }
+
+@media screen and (max-width: 425px) {
+  .diagram__column-name {
+      min-width: 80px;
+  }
+}

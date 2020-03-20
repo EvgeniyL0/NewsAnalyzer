@@ -11,9 +11,9 @@
     width: 74px;
     height: 74px;
     margin-bottom: 24px;
-    border: 1px solid #B6BCBF;
+    border: 2px solid #F5F6F7;
     border-radius: 100%;
-    border-left-color: black;
+    border-left-color: #B6BCBF;
     animation-name: rotation;
     animation-duration: 1s;
     animation-timing-function: linear;

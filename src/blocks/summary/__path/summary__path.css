@@ -11,3 +11,9 @@
         margin-bottom: 64px;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .summary__path {
+        display: none;
+    }
+}

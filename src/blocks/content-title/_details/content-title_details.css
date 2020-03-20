@@ -4,3 +4,10 @@
     font-size: 26px;
     line-height: 30px;
 }
+
+@media screen and (max-width: 425px) {
+    .content-title_details {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+}
