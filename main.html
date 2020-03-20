@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="news analyzer">
+  <meta name="author" content="Evgeniy Lobanov">
+  <title>NewsAnalyzer</title>
+  <link rel="icon" type="image/png" href="./images/favicon.png" />
+  <link rel="stylesheet" href="index.800bc718d2111d16aae9.css">
+</head>
+
+<body>
+  <div class="root">
+    <section class="search root__section">
+      <header class="header">
+        <p class="header__logo">NewsAnalyzer</p>
+        <nav class="header__page-links">
+          <a href="./main.html" class="header__page header__page_theme_light header__page_current">Главная</a>
+          <a href="./about.html" class="header__page header__page_theme_light">О проекте</a>
+        </nav>
+      </header>
+      <div class="rectangle"></div>
+      <div class="section-content">
+        <h1 class="content-title content-title_search">Что в мире творится?</h1>
+        <p class="content-subtitle content-subtitle_search">Введите в поиске любую тему и узнайте, насколько популярной
+          она была в новостях за
+          прошедшую неделю.</p>
+        <form class="search__form" name="" novalidate>
+          <input type="text" class="search__input" placeholder="Введите тему новости">
+          <button type="submit" class="button button_search">Искать</button>
+        </form>
+      </div>
+    </section>
+    <section class="results root__section">
+      <div class="section-content">
+        <div class="results__load">
+          <div class="loader"></div>
+          <p class="content-subtitle content-subtitle_load">Идёт поиск новостей...</p>
+          <img src="./images/not-found.svg" alt="Sad smile" class="results__not-found-image">
+          <h2 class="content-title content-title_load">Ничего не найдено</h2>
+          <p class="content-subtitle content-subtitle_load">К сожалению по вашему запросу ничего не найдено</p>
+        </div>
+        <div class="section-header">
+          <h2 class="content-title content-title_section-header">Результаты поиска</h2>
+          <a href="./paper.html" class="section-header__link">Посмотреть аналитику &gt;</a>
+        </div>
+        <div class="results__news-cards">
+          <div class="card">
+            <img src="./images/sample.jpg" alt="" class="card__image">
+            <div class="card__description">
+              <p class="card__date">2 августа, 2019</p>
+              <a href="" class="card__news-title">Национальное достояние - парки</a>
+              <p class="card__news-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
+                складываться
+                система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+              </p>
+              <p class="card__source">ЛЕНТА.РУ</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./images/sample.jpg" alt="" class="card__image">
+            <div class="card__description">
+              <p class="card__date">2 августа, 2019</p>
+              <a href="" class="card__news-title">Лесные огоньки: история одной фотографии</a>
+              <p class="card__news-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики,
+                чтобы
+                запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+              <p class="card__source">МЕДУЗА</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./images/sample.jpg" alt="" class="card__image">
+            <div class="card__description">
+              <p class="card__date">2 августа, 2019</p>
+              <a href="" class="card__news-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</a>
+              <p class="card__news-text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
+                необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+              <p class="card__source">РИА</p>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="button button_more">Показать ещё</button>
+      </div>
+    </section>
+    <section class="author root__section">
+      <div class="section-content section-content_author">
+        <img src="" alt="Author photo" class="author__photo">
+        <div class="author__about">
+          <h2 class="content-title content-title_author">Об авторе</h2>
+          <p class="author__about-text">Это блок с описаением автора проекта.</p>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2020 Supersite</p>
+      <menu class="menu">
+        <a href="./main.html" class="menu__link">Главная</a>
+        <a href="./about.html" class="menu__link">О проекте</a>
+        <a href="" class="menu__link">Яндекс.Практикум</a>
+      </menu>
+      <div class="footer__social">
+        <a href="" class="footer__social-link">
+          <img src="./images/github-icon.svg" alt="Github icon" class="footer__social-icon">
+        </a>
+        <a href="" class="footer__social-link">
+          <img src="./images/fb-icon.svg" alt="Facebook icon" class="footer__social-icon">
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
