@@ -8,3 +8,9 @@
     margin-top: 22px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .header__page-links {
+    margin-top: 16px;
+  }
+}

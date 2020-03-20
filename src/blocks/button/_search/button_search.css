@@ -7,3 +7,10 @@
   top: 0;
   right: 0;
 }
+
+@media screen and (max-width: 425px) {
+  .button_search {
+    width: 100%;
+    position: relative;
+  }
+}

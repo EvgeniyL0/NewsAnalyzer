@@ -14,3 +14,9 @@
         grid-gap: 8px;
     } 
 }
+
+@media screen and (max-width: 510px) {
+    .results__news-cards {
+        grid-template-columns: 1fr;
+    }
+}

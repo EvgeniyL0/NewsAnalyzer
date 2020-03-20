@@ -12,3 +12,9 @@
     width: 240px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .button_more {
+    width: 288px;
+  }
+}

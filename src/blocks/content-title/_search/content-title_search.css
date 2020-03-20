@@ -10,12 +10,18 @@
 
 @media screen and (max-width: 768px) {
   .content-title_search {
-    width: 385px;
-    margin-left: calc((100% - 448px) / 2);
+    max-width: 448px;
     margin-top: 40px;
-    margin-right: 0;
     margin-bottom: 16px;
     font-size: 36px;
     line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .content-title_search {
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 56px;
   }
 }

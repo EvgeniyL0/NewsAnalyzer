@@ -1,11 +1,20 @@
 .content-subtitle_search {
   max-width: 608px;
   margin-bottom: 64px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 @media screen and (max-width: 768px) {
   .content-subtitle_search {
-    width: 448px;
+    max-width: 448px;
     margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .content-subtitle_search {
+    font-size: 20px;
+    line-height: 26px;
   }
 }

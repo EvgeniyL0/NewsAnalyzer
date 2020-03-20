@@ -1,6 +1,8 @@
-.content-subtitle_results {
+.content-subtitle_load {
   max-width: 356px;
   margin-bottom: 0;
+  font-size: 18px;
+  line-height: 24px;
   text-align: center;
   color: #B6BCBF;
 }
