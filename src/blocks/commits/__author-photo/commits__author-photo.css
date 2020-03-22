@@ -1,0 +1,15 @@
+.commits__author-photo {
+  width: 64px;
+  height: 64px;
+  margin-right: 16px;
+  object-fit: cover;
+  border-radius: 100%;
+  background-color: #F5F6F7;
+}
+
+@media screen and (max-width: 425px) {
+  .commits__author-photo {
+    width: 48px;
+    height: 48px;
+  }
+}

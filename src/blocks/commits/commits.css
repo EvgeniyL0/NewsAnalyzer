@@ -1,3 +1,11 @@
+@import url(./__about-author/commits__about-author.css);
+@import url(./__author-email/commits__author-email.css);
+@import url(./__author-name/commits__author-name.css);
+@import url(./__author-photo/commits__author-photo.css);
+@import url(./__date/commits__date.css);
+@import url(./__header/commits__header.css);
+@import url(./__text/commits__text.css);
+
 .commits {
     background-color: #F5F6F7;
     color: #1A1B22;

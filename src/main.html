@@ -17,7 +17,7 @@
       <header class="header">
         <p class="header__logo">NewsAnalyzer</p>
         <nav class="header__page-links">
-          <a href="./main.html" class="header__page header__page_theme_light header__page_current">Главная</a>
+          <a href="./index.html" class="header__page header__page_theme_light header__page_current">Главная</a>
           <a href="./about.html" class="header__page header__page_theme_light">О проекте</a>
         </nav>
       </header>
@@ -96,7 +96,7 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Supersite</p>
       <menu class="menu">
-        <a href="./main.html" class="menu__link">Главная</a>
+        <a href="./index.html" class="menu__link">Главная</a>
         <a href="./about.html" class="menu__link">О проекте</a>
         <a href="" class="menu__link">Яндекс.Практикум</a>
       </menu>
@@ -110,6 +110,7 @@
       </div>
     </footer>
   </div>
+  <script type="module" src="<%=htmlWebpackPlugin.files.chunks.main.entry%>"></script>
 </body>
 
 </html>

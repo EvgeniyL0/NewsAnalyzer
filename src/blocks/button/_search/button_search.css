@@ -1,6 +1,7 @@
 .button_search {
   width: 168px;
   background-color: #2F71E5;
+  border: none;
   border-radius: 100px;
   color: white;
   position: absolute;

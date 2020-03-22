@@ -50,7 +50,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/main.html',
-            filename: 'main.html'
+            filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
