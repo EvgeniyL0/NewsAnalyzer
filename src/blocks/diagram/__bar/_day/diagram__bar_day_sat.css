@@ -1,3 +1,8 @@
 .diagram__bar_day_sat {
   width: 2%;
 }
+
+.diagram__bar_day_sat::after {
+  content: '10';
+  margin-left: 6px;
+}

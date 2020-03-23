@@ -1,3 +1,8 @@
 .diagram__bar_day_sun {
   width: 0%;
 }
+
+.diagram__bar_day_sun::after {
+  content: '';
+  margin-left: 6px;
+}

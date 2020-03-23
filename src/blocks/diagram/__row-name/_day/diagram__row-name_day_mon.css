@@ -1,0 +1,3 @@
+.diagram__row-name_day_mon::before {
+  content: '19';
+}

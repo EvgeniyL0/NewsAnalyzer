@@ -20,7 +20,7 @@ module.exports = {
         },
         {
             test: /\.css$/,
-            use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader']
+            use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader'],
         },
         {
             test: /\.(eot|ttf|woff|woff2)$/,
@@ -38,7 +38,7 @@ module.exports = {
         }]
     },
     plugins: [
-        new MiniCssExtractPlugin({filename: 'index.[contenthash].css'}),
+        new MiniCssExtractPlugin({filename: '[name].[contenthash].css'}),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),
@@ -50,17 +50,20 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/main.html',
-            filename: 'index.html'
+            filename: 'index.html',
+            chunks: ['main']
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/paper.html',
-            filename: 'paper.html'
+            filename: 'paper.html',
+            chunks: ['paper']
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/about.html',
-            filename: 'about.html'
+            filename: 'about.html',
+            chunks: ['about']
         }),
         new WebpackMd5Hash(),
         new webpack.DefinePlugin({

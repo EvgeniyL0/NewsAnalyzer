@@ -1,9 +1,5 @@
-@import url(./__content-text/summary__content-text.css);
-@import url(./__current-page/summary__current-page.css);
-@import url(./__main-page-link/summary__main-page-link.css);
 @import url(./__number-of-news/summary__number-of-news.css);
-@import url(./__number-of-references.css/summary__number-of-references.css);
-@import url(./__path/summary__path.css);
+@import url(./__number-of-references/summary__number-of-references.css);
 
 .summary {
     padding-top: 0;

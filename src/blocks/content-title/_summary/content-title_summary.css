@@ -5,6 +5,10 @@
     line-height: 46px;
 }
 
+.content-title_summary::after {
+    content: open-quote 'Путешествия' close-quote;
+}
+
 @media screen and (max-width: 768px) {
     .content-title_summary {
         font-size: 30px;

@@ -1,3 +1,8 @@
 .diagram__bar_day_wed {
   width: 10%;
 }
+
+.diagram__bar_day_wed::after {
+  content: '10';
+  margin-left: 6px;
+}
