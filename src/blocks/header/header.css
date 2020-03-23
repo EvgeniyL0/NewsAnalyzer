@@ -3,15 +3,7 @@
 @import url(./__page-links/header__page-links.css);
 
 .header {
-  width: 86%;
-  margin-left: auto;
-  margin-right: auto;
   display: flex;
   justify-content: space-between;
-}
-
-@media screen and (max-width: 768px) {
-  .header {
-    width: 90%;
-  }
+  border-bottom: 2px solid rgba(196, 196, 196, 0.1);
 }

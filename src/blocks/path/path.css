@@ -1,0 +1,23 @@
+@import url(./__link/path__link.css);
+@import url(./_summary/path_summary.css);
+
+.path {
+    margin: 0;
+    padding: 0;
+}
+
+.path li {
+    display: inline-block;
+    color: #B6BCBF;
+}
+
+.past li::after {
+    content: '/';
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #B6BCBF;
+}
+/*
+.past li:first-child::before {
+    content: '';
+}*/

@@ -1,5 +1,7 @@
 .header__logo {
+  margin-left: 7%;
   margin-top: 30px;
+  margin-right: 0;
   margin-bottom: 30px;
   font-family: 'Roboto Slab';
   font-style: normal;

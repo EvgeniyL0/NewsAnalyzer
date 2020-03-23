@@ -6,7 +6,7 @@
     border-top-right-radius: 16px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 948px) {
     .card__image {
         height: 150px;
     } 
