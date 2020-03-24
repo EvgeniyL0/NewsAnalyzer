@@ -1,17 +1,25 @@
-class NewsApi {
-    constructor(keyword, date) {
-        this.keyword = keyword;
-        this.date = date;
+export class NewsApi {
+    constructor(apiToken) {
+        this.apiToken = apiToken;
     }
 
-    getNews() {
+    getNews(keyword, date, callbackFunc) {
         return fetch('http://newsapi.org/v2/everything?' +
-            `q=${this.keyword}&` +
-            `from=${this.date}&` +
+            `q=${keyword}&` +
+            `from=${date}&` +
             'sortBy=popularity&' +
-            'apiKey=a1a651d59146429db5b30e99c590b996')
-        .then()
-        .then()
-        .catch()
+            `apiKey=${this.apiToken}`)
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            }
+            return Promise.reject(`Ошибка ${res.status}`);
+        })
+        .then(data => {
+            callbackFunc(data);
+        })
+        .catch(err => {
+            console.log(err);
+        })
     }
 }
