@@ -8,13 +8,13 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
     entry: { 
-        main: './src/js/main.js',
-        paper: './src/js/paper.js',
-        about: './src/js/about.js'
+        main: './src/index.js',
+        paper: './src/analytics/index.js',
+        about: './src/about/index.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: './assets/[name].[chunkhash].js'
+        filename: './assets/index.[chunkhash].js'
     },
     module: {
         rules: [{
@@ -25,8 +25,9 @@ module.exports = {
         {
             test: /\.css$/,
             use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-            'css-loader', 
-            'postcss-loader'],
+                'css-loader', 
+                'postcss-loader'
+            ],
         },
         {
             test: /\.(eot|ttf|woff|woff2)$/,
@@ -55,13 +56,13 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             inject: false,
-            template: './src/main.html',
+            template: './src/index.html',
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
-            template: './src/paper.html',
-            filename: 'paper.html'
+            template: './src/analytics.html',
+            filename: 'analytics.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,

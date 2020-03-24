@@ -1,4 +1,4 @@
-import '../pages/main.css';
+import '../pages/index.css';
 import '../images/favicon.png';
 import '../images/search-back.png';
 import '../images/not-found.svg';
