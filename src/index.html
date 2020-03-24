@@ -8,7 +8,7 @@
   <meta name="author" content="Evgeniy Lobanov">
   <title>NewsAnalyzer</title>
   <link rel="icon" type="image/png" href="./images/favicon.png" />
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css%>">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css%>">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
         <p class="content-subtitle content-subtitle_search">Введите в поиске любую тему и узнайте, насколько популярной
           она была в новостях за
           прошедшую неделю.</p>
-        <form class="search__form" name="" novalidate>
+        <form class="search__form" name="search" novalidate>
           <input type="text" class="search__input" placeholder="Введите тему новости">
           <button type="submit" class="button button_search">Искать</button>
         </form>
@@ -105,7 +105,7 @@
       </ul>
     </footer>
   </div>
-  <script type="module" src="<%=htmlWebpackPlugin.files.chunks.main.entry%>"></script>
+  <script type="module" src="<%=htmlWebpackPlugin.files.chunks.index.entry%>"></script>
 </body>
 
 </html>
