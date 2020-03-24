@@ -8,7 +8,7 @@
     <meta name="author" content="Evgeniy Lobanov">
     <title>NewsAnalyzer</title>
     <link rel="icon" type="image/png" href="./images/favicon.png" />
-    <link rel="stylesheet" href="index.73fdf8737253bce5b461.css">
+    <link rel="stylesheet" href="./assets/paper.37cd6446a3542ea441e8.css">
 </head>
 
 <body>
@@ -21,18 +21,14 @@
                     <a href="./about.html" class="header__page header__page_theme_dark">О проекте</a>
                 </nav>
             </header>
-            <div class="rectangle"></div>
             <div class="section-content">
-                <p class="summary__path">
-                    <a href="./index.html" class="summary__main-page-link">Главная</a> <span
-                        class="summary__current-page">/ Аналитика</span>
-                </p>
-                <h1 class="content-title content-title_summary">Вы спросили: &laquo;<span
-                        class="summary__request-name">Путешествия</span>&raquo;</h1>
-                <p class="summary__content-text">Новостей за неделю: <span class="summary__number-of-news">34 324</span>
-                </p>
-                <p class="summary__content-text">Упоминаний в заголовках: <span
-                        class="summary__number-of-references">235</span></p>
+                <ul class="path path_summary">
+                    <li><a href="./index.html">Главная</a></li>
+                    <li>Аналитика</li>
+                </ul>
+                <h1 class="content-title content-title_summary">Вы спросили: </h1>
+                <p class="summary__number-of-news">Новостей за неделю: </p>
+                <p class="summary__number-of-references">Упоминаний в заголовках: </p>
             </div>
         </section>
         <section class="details root__section">
@@ -52,46 +48,32 @@
                         <p>100</p>
                     </div>
                     <div class="diagram__row diagram__row_first">
-                        <p class="diagram__row-name"><span class="diagram__day diagram__day_mon">19</span>, пн</p>
-                        <div class="diagram__bar diagram__bar_day_mon">
-                            <p class="diagram__bar-text diagram__bar-text_day_mon">10</p>
-                        </div>
+                        <p class="diagram__row-name diagram__row-name_day_mon">, пн</p>
+                        <div class="diagram__bar diagram__bar_day_mon"></div>
                     </div>
                     <div class="diagram__row">
-                        <p class="diagram__row-name"><span class="diagram__day diagram__day_tue">20</span>, вт</p>
-                        <div class="diagram__bar diagram__bar_day_tue">
-                            <p class="diagram__bar-text diagram__bar-text_day_tue">10</p>
-                        </div>
+                        <p class="diagram__row-name diagram__row-name_day_tue">, вт</p>
+                        <div class="diagram__bar diagram__bar_day_tue"></div>
                     </div>
                     <div class="diagram__row">
-                        <p class="diagram__row-name"><span class="diagram__day diagram__day_wed">21</span>, ср</p>
-                        <div class="diagram__bar diagram__bar_day_wed">
-                            <p class="diagram__bar-text diagram__bar-text_day_wed">10</p>
-                        </div>
+                        <p class="diagram__row-name diagram__row-name_day_wed">, ср</p>
+                        <div class="diagram__bar diagram__bar_day_wed"></div>
                     </div>
                     <div class="diagram__row">
-                        <p class="diagram__row-name"><span class="diagram__day diagram__day_thu">22</span>, чт</p>
-                        <div class="diagram__bar diagram__bar_day_thu">
-                            <p class="diagram__bar-text diagram__bar-text_day_thu">10</p>
-                        </div>
+                        <p class="diagram__row-name diagram__row-name_day_thu">, чт</p>
+                        <div class="diagram__bar diagram__bar_day_thu"></div>
                     </div>
                     <div class="diagram__row">
-                        <p class="diagram__row-name"><span class="diagram__day diagram__day_fri">23</span>, пт</p>
-                        <div class="diagram__bar diagram__bar_day_fri">
-                            <p class="diagram__bar-text diagram__bar-text_day_fri">10</p>
-                        </div>
+                        <p class="diagram__row-name diagram__row-name_day_fri">, пт</p>
+                        <div class="diagram__bar diagram__bar_day_fri"></div>
                     </div>
                     <div class="diagram__row">
-                        <p class="diagram__row-name"><span class="diagram__day diagram__day_sat">24</span>, сб</p>
-                        <div class="diagram__bar diagram__bar_day_sat">
-                            <p class="diagram__bar-text diagram__bar-text_day_sat">2</p>
-                        </div>
+                        <p class="diagram__row-name diagram__row-name_day_sat">, сб</p>
+                        <div class="diagram__bar diagram__bar_day_sat"></div>
                     </div>
                     <div class="diagram__row">
-                        <p class="diagram__row-name"><span class="diagram__day diagram__day_sun">25</span>, вс</p>
-                        <div class="diagram__bar diagram__bar_day_sun">
-                            <p class="diagram__bar-text diagram__bar-text_day_sun"></p>
-                        </div>
+                        <p class="diagram__row-name diagram__row-name_day_sun">, вс</p>
+                        <div class="diagram__bar diagram__bar_day_sun"></div>
                     </div>
                     <div class="diagram__scale">
                         <p>0</p>
@@ -108,19 +90,15 @@
             <menu class="menu">
                 <a href="./index.html" class="menu__link">Главная</a>
                 <a href="./about.html" class="menu__link">О проекте</a>
-                <a href="" class="menu__link">Яндекс.Практикум</a>
+                <a href="https://praktikum.yandex.ru/" class="menu__link">Яндекс.Практикум</a>
             </menu>
-            <div class="footer__social">
-                <a href="" class="footer__social-link">
-                    <img src="./images/github-icon.svg" alt="Github icon" class="footer__social-icon">
-                </a>
-                <a href="" class="footer__social-link">
-                    <img src="./images/fb-icon.svg" alt="Facebook icon" class="footer__social-icon">
-                </a>
-            </div>
+            <ul class="footer__social">
+                <li><a href=""><img src="./images/github-icon.svg" alt="Github icon" class="footer__social-icon"></a></li>
+                <li><a href=""><img src="./images/fb-icon.svg" alt="Facebook icon" class="footer__social-icon"></a></li>
+            </ul>
         </footer>
     </div>
-    <script type="module" src="main.32db096fd7c3469fe5e2.js"></script>
+    <script type="module" src="./assets/paper.e0945d5be482dd93f2ca.js"></script>
 </body>
 
 </html>
