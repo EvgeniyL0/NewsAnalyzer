@@ -3,6 +3,6 @@
 }
 
 .diagram__bar_day_sat::after {
-  content: '10';
+  content: '2';
   margin-left: 6px;
 }

@@ -7,10 +7,14 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-    entry: { main: './src/index.js' },
+    entry: { 
+        main: './src/js/main.js',
+        paper: './src/js/paper.js',
+        about: './src/js/about.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[chunkhash].js'
+        filename: './assets/[name].[chunkhash].js'
     },
     module: {
         rules: [{
@@ -20,7 +24,9 @@ module.exports = {
         },
         {
             test: /\.css$/,
-            use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader'],
+            use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+            'css-loader', 
+            'postcss-loader'],
         },
         {
             test: /\.(eot|ttf|woff|woff2)$/,
@@ -38,7 +44,7 @@ module.exports = {
         }]
     },
     plugins: [
-        new MiniCssExtractPlugin({filename: '[name].[contenthash].css'}),
+        new MiniCssExtractPlugin({filename: './assets/[name].[contenthash].css'}),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),
@@ -50,20 +56,17 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/main.html',
-            filename: 'index.html',
-            chunks: ['main']
+            filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/paper.html',
-            filename: 'paper.html',
-            chunks: ['paper']
+            filename: 'paper.html'
         }),
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/about.html',
-            filename: 'about.html',
-            chunks: ['about']
+            filename: 'about.html'
         }),
         new WebpackMd5Hash(),
         new webpack.DefinePlugin({
