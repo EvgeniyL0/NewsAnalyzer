@@ -1,10 +1,11 @@
 export class NewsCardList {
-  constructor (container, card) {
+  constructor (container) {
     this.container = container;
-    this.card = card;
   }
 
-  renderCardList(articlesArray) {
-    
+  renderCardList(index, createCardMethod) {
+    for (let i = index; i < index + 3; i++) {
+      this.container.appendChild((createCardMethod(JSON.parse(sessionStorage.getItem(i)))));
+    }
   }
 }
