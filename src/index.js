@@ -5,16 +5,16 @@ import './images/not-found.svg';
 import './images/sample.jpg';
 import './images/fb-icon.svg';
 import './images/github-icon.svg';
-import {NewsApi} from './js/modules/NewsApi.js';
-import {NewsCard} from './js/modules/NewsCard.js';
-import {NewsCardList} from './js/modules/NewsCardList.js';
+import { NewsApi } from './js/modules/NewsApi.js';
+import { NewsCard } from './js/modules/NewsCard.js';
+import { NewsCardList } from './js/modules/NewsCardList.js';
 
 (function () {
     const searchForm = document.forms.search;
     const moreBtn = document.querySelector('.button_more');
     const requestToApi = new NewsApi('a1a651d59146429db5b30e99c590b996');
     const card = new NewsCard();
-    const resultsList = new NewsCardList(document.querySelector('.results__news-cards'));
+    const resultsList = new NewsCardList(document.querySelector('.results__news-cards'), document.querySelector('.section-header'));
 
     function showLoading(isLoad) {
         if (isLoad) {
@@ -34,18 +34,22 @@ import {NewsCardList} from './js/modules/NewsCardList.js';
         event.preventDefault();
         sessionStorage.clear();
         showLoading(true);
-        requestToApi.getNews(searchForm.elements.topic.value, '2020-03-25', 
-        (data) => {
-            data.articles.forEach((item, index) => {
-                sessionStorage.setItem(index, JSON.stringify(item));
+        requestToApi.getNews(searchForm.elements.topic.value, '2020-03-25',
+            (data) => {
+                data.articles.forEach((item, index) => {
+                    sessionStorage.setItem(index, JSON.stringify(item));
+                });
+                resultsList.renderCardList(true, document.createElement('div'), 
+                    (article) => card.create(article.title, article.description, article.publishedAt, article.source.name, article.urlToImage, article.url)
+                );
+                showLoading(false);
             });
-            resultsList.renderCardList(3, (article) => card.create(article.title, article.description, article.publishedAt, article.source.name, article.urlToImage, article.url));
-            showLoading(false);
-        });
     }
 
     function moreNewsHandler(event) {
-        resultsList.renderCardList((article) => card.create(article.title, article.description, article.publishedAt, article.source.name, article.urlToImage, article.url));
+        resultsList.renderCardList(false, document.createElement('div'), 
+            (article) => card.create(article.title, article.description, article.publishedAt, article.source.name, article.urlToImage, article.url)
+        );
     }
 
     searchForm.addEventListener('submit', searchHandler);
