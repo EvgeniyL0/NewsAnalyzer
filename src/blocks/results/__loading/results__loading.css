@@ -1,5 +1,5 @@
 .results__loading {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
 }
