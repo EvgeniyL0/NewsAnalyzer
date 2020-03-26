@@ -6,14 +6,8 @@
     border-top-right-radius: 16px;
 }
 
-@media screen and (max-width: 948px) {
-    .card__image {
-        height: 150px;
-    } 
-}
-
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 1024px) {
     .card__image {
         height: 196px;
-    }
+    } 
 }
