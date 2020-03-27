@@ -12,6 +12,7 @@ import { conversionDate } from './js/utils/stringConversion.js';
 
 (function () {
     const searchForm = document.forms.search;
+    const moreBtn = document.querySelector('.button_more');
     const resultsSection = document.querySelector('.results');
     const loadingSection = document.querySelector('.results__loading');
     const notFoundSection = document.querySelector('.results__not-found');
@@ -31,7 +32,7 @@ import { conversionDate } from './js/utils/stringConversion.js';
         loadingSection.style.display = 'none';
         if (isFound) {
             newsCardsSection.style.display = 'block';
-            document.querySelector('.button_more').addEventListener('click', moreNewsHandler);
+            moreBtn.addEventListener('click', moreNewsHandler);
         } else {
             notFoundSection.style.display = 'flex';
         }
@@ -47,7 +48,7 @@ import { conversionDate } from './js/utils/stringConversion.js';
                     data.articles.forEach((item, index) => {
                         sessionStorage.setItem(index, JSON.stringify(item));
                     });
-                    resultsList.renderCardList(true, document.createElement('div'), document.querySelector('.button_more'),
+                    resultsList.renderCardList(true, document.createElement('div'), moreBtn,
                         (article) => card.create(article.title, article.description, conversionDate(article.publishedAt), article.source.name, article.urlToImage, article.url)
                     );
                     showResults(true);

@@ -11,7 +11,7 @@ export class NewsCard {
             `<img src="${image}" alt="" class="card__image">
             <div class="card__description">
               <p class="card__date">${data}</p>
-              <a href="${url}" class="card__news-title">${title}</a>
+              <a href="${url}" class="card__news-title" target="_blank">${title}</a>
               <p class="card__news-text">${text}</p>
               <p class="card__source">${source}</p>
             </div>`);
