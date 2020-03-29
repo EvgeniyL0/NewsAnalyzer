@@ -1,8 +1,0 @@
-.diagram__bar_day_tue {
-  width: 10%;
-}
-
-.diagram__bar_day_tue::after {
-  content: '10';
-  margin-left: 6px;
-}

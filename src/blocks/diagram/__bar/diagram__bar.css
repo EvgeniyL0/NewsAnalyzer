@@ -1,13 +1,25 @@
-@import url(./_day/diagram__bar_day_mon.css);
-@import url(./_day/diagram__bar_day_tue.css);
-@import url(./_day/diagram__bar_day_wed.css);
-@import url(./_day/diagram__bar_day_thu.css);
-@import url(./_day/diagram__bar_day_fri.css);
-@import url(./_day/diagram__bar_day_sat.css);
-@import url(./_day/diagram__bar_day_sun.css);
+@import url(./_number/diagram__bar_number_1.css);
+@import url(./_number/diagram__bar_number_2.css);
+@import url(./_number/diagram__bar_number_3.css);
+@import url(./_number/diagram__bar_number_4.css);
+@import url(./_number/diagram__bar_number_5.css);
+@import url(./_number/diagram__bar_number_6.css);
+@import url(./_number/diagram__bar_number_7.css);
 
 .diagram__bar {
     margin: 0;
     background-color: #2F71E5;
-    color: white;
+    color: #F5F6F7;
+}
+
+.diagram__bar p {
+    margin-left: 6px;   
+    margin-top: 0;
+    margin-bottom: 0; 
+}
+
+@media screen and (max-width: 425px) {
+    .diagram__bar p {
+        display: none;
+    }
 }

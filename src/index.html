@@ -27,8 +27,8 @@
           она была в новостях за
           прошедшую неделю.</p>
         <form class="search__form" name="search" novalidate>
-          <input type="text" class="search__input" name="topic" placeholder="Введите тему новости">
-          <button type="submit" class="button button_search">Искать</button>
+          <input type="text" class="search__input" name="topic" placeholder="Введите тему новости" required>
+          <button type="submit" class="button button_search" name="search" disabled>Искать</button>
         </form>
       </div>
     </section>
@@ -64,15 +64,15 @@
     </section>
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Supersite</p>
-      <menu class="menu">
-        <a href="./index.html" class="menu__link">Главная</a>
-        <a href="./about.html" class="menu__link">О проекте</a>
-        <a href="https://praktikum.yandex.ru/" class="menu__link">Яндекс.Практикум</a>
-      </menu>
+      <ul class="footer__links">
+        <li><a href="./index.html" class="footer__link">Главная</a></li>
+        <li><a href="./about.html" class="footer__link">О проекте</a></li>
+        <li><a href="https://praktikum.yandex.ru/" class="footer__link" target="_blank">Яндекс.Практикум</a></li>
+      </ul>
       <ul class="footer__social">
-        <li><a href="https://github.com/EvgeniyL0"><img src="./images/github-icon.svg" alt="Github иконка"
+        <li><a href="https://github.com/EvgeniyL0" target="_blank"><img src="./images/github-icon.svg" alt="Github иконка"
               class="footer__social-icon"></a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=100022798724794"><img src="./images/fb-icon.svg"
+        <li><a href="https://www.facebook.com/profile.php?id=100022798724794" target="_blank"><img src="./images/fb-icon.svg"
               alt="Facebook иконка" class="footer__social-icon"></a></li>
       </ul>
     </footer>

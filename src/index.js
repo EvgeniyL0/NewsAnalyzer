@@ -9,6 +9,7 @@ import { NewsApi } from './js/modules/NewsApi.js';
 import { NewsCard } from './js/modules/NewsCard.js';
 import { NewsCardList } from './js/modules/NewsCardList.js';
 import { conversionDate } from './js/utils/stringConversion.js';
+import { FormValidator } from './js/modules/formValidator.js';
 
 (function () {
     const searchForm = document.forms.search;
@@ -20,12 +21,14 @@ import { conversionDate } from './js/utils/stringConversion.js';
     const requestToApi = new NewsApi('a1a651d59146429db5b30e99c590b996');
     const card = new NewsCard();
     const resultsList = new NewsCardList(document.querySelector('.results__news-cards'), document.querySelector('.section-header'));
+    const checkFormValidity = new FormValidator();
 
     function showLoading() {
         newsCardsSection.style.display = 'none';
         notFoundSection.style.display = 'none';
         resultsSection.style.display = 'block';
         loadingSection.style.display = 'flex';
+        searchForm.elements.search.setAttribute('disabled', '');
     }
 
     function showResults(isFound) {
@@ -39,30 +42,40 @@ import { conversionDate } from './js/utils/stringConversion.js';
     }
 
     function searchHandler(event) {
+        let startDate = new Date();
+
+        startDate.setDate(startDate.getDate() - 6);
         event.preventDefault();
         sessionStorage.clear();
         showLoading();
-        requestToApi.getNews(searchForm.elements.topic.value, '2020-03-25',
+        sessionStorage.setItem('topic', searchForm.elements.topic.value);
+        requestToApi.getNews(searchForm.elements.topic.value, `${startDate.getFullYear()}-${startDate.getMonth() + 1}-${startDate.getDate()}`,
             (data) => {
                 if (data.articles.length !== 0) {
-                    data.articles.forEach((item, index) => {
-                        sessionStorage.setItem(index, JSON.stringify(item));
-                    });
-                    resultsList.renderCardList(true, document.createElement('div'), moreBtn,
+                    sessionStorage.setItem('response', JSON.stringify(data));
+                    console.log(JSON.parse(sessionStorage.getItem('response')).articles);
+                    resultsList.renderCardList(true, JSON.parse(sessionStorage.getItem('response')).articles, document.createElement('div'), moreBtn,
                         (article) => card.create(article.title, article.description, conversionDate(article.publishedAt), article.source.name, article.urlToImage, article.url)
                     );
                     showResults(true);
                 } else {
                     showResults(false);
                 }
+                searchForm.elements.search.removeAttribute('disabled');
             });
     }
 
     function moreNewsHandler(event) {
-        resultsList.renderCardList(false, document.createElement('div'), event.target,
+        resultsList.renderCardList(false, JSON.parse(sessionStorage.getItem('response')).articles, document.createElement('div'), event.target,
             (article) => card.create(article.title, article.description, conversionDate(article.publishedAt), article.source.name, article.urlToImage, article.url)
         );
     }
 
+    function checkInputHandler(event) {
+        checkFormValidity.checkInput(event.target, searchForm.elements.search);
+    }
+
     searchForm.addEventListener('submit', searchHandler);
+    searchForm.addEventListener('input', checkInputHandler);
+    
 })();

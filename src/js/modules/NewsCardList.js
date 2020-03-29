@@ -5,7 +5,7 @@ export class NewsCardList {
     this.start = 0;
   }
 
-  renderCardList(isFirst, divContainer, downloadMoreButton, createCardMethod) {
+  renderCardList(isFirst, arrayOfArticles, divContainer, downloadMoreButton, createCardMethod) {
     if (isFirst) {
       this.cardsContainer.replaceWith('');
       this.start = 0;
@@ -15,13 +15,14 @@ export class NewsCardList {
       downloadMoreButton.style.display = 'block';
     }
     for (let i = this.start; i < this.start + 3; i++) {;
-      if (sessionStorage.getItem(i) === null) {
+      if (arrayOfArticles[i] === undefined) {
         break;
       }
-      if (sessionStorage.getItem(i + 1) === null) {
+      if (arrayOfArticles[i + 1] === undefined) {
         downloadMoreButton.style.display = 'none';
       }
-      this.cardsContainer.append((createCardMethod(JSON.parse(sessionStorage.getItem(i)))));
+      console.log(arrayOfArticles[i]);
+      this.cardsContainer.append((createCardMethod(arrayOfArticles[i])));
     }
     this.start += 3;
   }

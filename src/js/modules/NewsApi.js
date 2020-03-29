@@ -7,7 +7,8 @@ export class NewsApi {
         return fetch('http://newsapi.org/v2/everything?' +
             `q=${keyword}&` +
             `from=${date}&` +
-            'sortBy=popularity&' +
+            'sortBy=publishedAt&' +
+            'pageSize=100&' +
             `apiKey=${this.apiToken}`)
         .then(res => {
             if (res.ok) {

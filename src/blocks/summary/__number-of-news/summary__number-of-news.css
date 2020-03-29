@@ -4,9 +4,3 @@
     font-size: 18px;
     line-height: 24px;
 }
-
-.summary__number-of-news::after {
-    content: '34 342';
-    font-family: 'Roboto';
-    font-weight: 700;
-}

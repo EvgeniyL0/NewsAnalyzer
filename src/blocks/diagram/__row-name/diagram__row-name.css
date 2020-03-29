@@ -1,11 +1,3 @@
-@import url(./_day/diagram__row-name_day_mon.css);
-@import url(./_day/diagram__row-name_day_tue.css);
-@import url(./_day/diagram__row-name_day_wed.css);
-@import url(./_day/diagram__row-name_day_thu.css);
-@import url(./_day/diagram__row-name_day_fri.css);
-@import url(./_day/diagram__row-name_day_sat.css);
-@import url(./_day/diagram__row-name_day_sun.css);
-
 .diagram__row-name {
     width: 104px;
     margin: 0;
@@ -17,5 +9,6 @@
 @media screen and (max-width: 425px) {
     .diagram__row-name {
         width: 80px;
+        font-size: 12px;
     }
 }

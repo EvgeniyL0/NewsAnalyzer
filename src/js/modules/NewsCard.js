@@ -1,7 +1,5 @@
 export class NewsCard {
-    constructor () {
-
-    }
+    constructor () {}
 
     create(title, text, data, source, image, url) {
         const wrapper = document.createElement('div');
