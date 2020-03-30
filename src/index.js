@@ -18,7 +18,7 @@ import { FormValidator } from './js/modules/formValidator.js';
     const loadingSection = document.querySelector('.results__loading');
     const notFoundSection = document.querySelector('.results__not-found');
     const newsCardsSection = document.querySelector('.results__wrapper');
-    const requestToApi = new NewsApi('a1a651d59146429db5b30e99c590b996');
+    const requestNews = new NewsApi('a1a651d59146429db5b30e99c590b996');
     const card = new NewsCard();
     const resultsList = new NewsCardList(document.querySelector('.results__news-cards'), document.querySelector('.section-header'));
     const checkFormValidity = new FormValidator();
@@ -46,14 +46,14 @@ import { FormValidator } from './js/modules/formValidator.js';
 
         startDate.setDate(startDate.getDate() - 6);
         event.preventDefault();
-        sessionStorage.clear();
+        sessionStorage.removeItem('topic');
+        sessionStorage.removeItem('response');
         showLoading();
         sessionStorage.setItem('topic', searchForm.elements.topic.value);
-        requestToApi.getNews(searchForm.elements.topic.value, `${startDate.getFullYear()}-${startDate.getMonth() + 1}-${startDate.getDate()}`,
+        requestNews.getNews(searchForm.elements.topic.value, `${startDate.getFullYear()}-${startDate.getMonth() + 1}-${startDate.getDate()}`,
             (data) => {
                 if (data.articles.length !== 0) {
                     sessionStorage.setItem('response', JSON.stringify(data));
-                    console.log(JSON.parse(sessionStorage.getItem('response')).articles);
                     resultsList.renderCardList(true, JSON.parse(sessionStorage.getItem('response')).articles, document.createElement('div'), moreBtn,
                         (article) => card.create(article.title, article.description, conversionDate(article.publishedAt), article.source.name, article.urlToImage, article.url)
                     );

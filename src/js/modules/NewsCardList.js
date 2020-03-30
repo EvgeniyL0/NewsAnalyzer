@@ -21,7 +21,6 @@ export class NewsCardList {
       if (arrayOfArticles[i + 1] === undefined) {
         downloadMoreButton.style.display = 'none';
       }
-      console.log(arrayOfArticles[i]);
       this.cardsContainer.append((createCardMethod(arrayOfArticles[i])));
     }
     this.start += 3;
