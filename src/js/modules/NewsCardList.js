@@ -21,7 +21,7 @@ export class NewsCardList {
       if (arrayOfArticles[i + 1] === undefined) {
         downloadMoreButton.style.display = 'none';
       }
-      this.cardsContainer.append((createCardMethod(arrayOfArticles[i])));
+      this.cardsContainer.insertAdjacentHTML('beforeend', createCardMethod(arrayOfArticles[i]));
     }
     this.start += 3;
   }

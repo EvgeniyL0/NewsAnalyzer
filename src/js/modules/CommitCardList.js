@@ -1,11 +1,10 @@
 export class CommitCardList {
-  constructor(commitsContainer) {
-    this.commitsContainer = commitsContainer;
+  constructor() {
   }
 
-  renderCommitsList(commitsArray, commitCreateMethod) {
+  renderCommitsList(commitsArray, commitsContainer, createCommitMethod) {
     for (let i = 0; i < 20; i++) {
-      this.commitsContainer.insertAdjacentHTML('beforeend', commitCreateMethod(commitsArray[i]));
+      commitsContainer.insertAdjacentHTML('beforeend', createCommitMethod(commitsArray[i]));
     }
   }
 }

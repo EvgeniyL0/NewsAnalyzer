@@ -3,12 +3,13 @@ import './images/favicon.png';
 import './images/search-back.png';
 import './images/not-found.svg';
 import './images/sample.jpg';
+import './images/author.jpg';
 import './images/fb-icon.svg';
 import './images/github-icon.svg';
 import { NewsApi } from './js/modules/NewsApi.js';
 import { NewsCard } from './js/modules/NewsCard.js';
 import { NewsCardList } from './js/modules/NewsCardList.js';
-import { conversionDate } from './js/utils/stringConversion.js';
+import { dateConversion } from './js/utils/stringConversion.js';
 import { FormValidator } from './js/modules/formValidator.js';
 
 (function () {
@@ -55,7 +56,7 @@ import { FormValidator } from './js/modules/formValidator.js';
                 if (data.articles.length !== 0) {
                     sessionStorage.setItem('response', JSON.stringify(data));
                     resultsList.renderCardList(true, JSON.parse(sessionStorage.getItem('response')).articles, document.createElement('div'), moreBtn,
-                        (article) => card.create(article.title, article.description, conversionDate(article.publishedAt), article.source.name, article.urlToImage, article.url)
+                        (article) => card.create(article.title, article.description, dateConversion(article.publishedAt), article.source.name, article.urlToImage, article.url)
                     );
                     showResults(true);
                 } else {
@@ -67,7 +68,7 @@ import { FormValidator } from './js/modules/formValidator.js';
 
     function moreNewsHandler(event) {
         resultsList.renderCardList(false, JSON.parse(sessionStorage.getItem('response')).articles, document.createElement('div'), event.target,
-            (article) => card.create(article.title, article.description, conversionDate(article.publishedAt), article.source.name, article.urlToImage, article.url)
+            (article) => card.create(article.title, article.description, dateConversion(article.publishedAt), article.source.name, article.urlToImage, article.url)
         );
     }
 
