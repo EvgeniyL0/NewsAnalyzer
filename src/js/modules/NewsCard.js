@@ -1,8 +1,8 @@
 export class NewsCard {
-    constructor () {}
+    constructor() { }
 
     create(title, text, data, source, image, url) {
-        let cardMarkup = 
+        let cardMarkup =
             `<div class="card">
                 <img src="${image}" alt="" class="card__image">
                 <div class="card__description">

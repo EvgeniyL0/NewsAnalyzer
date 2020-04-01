@@ -1,8 +1,12 @@
 export class GithubApi {
-  constructor() { }
+  constructor(url) { 
+    this.url = url;
+
+    this.getCommits = this.getCommits.bind(this);
+  }
 
   getCommits(callbackFunc) {
-    return fetch('https://api.github.com/repos/EvgeniyL0/NewsAnalyzer/commits')
+    return fetch(this.url)
       .then(res => {
         if (res.ok) {
           return res.json();

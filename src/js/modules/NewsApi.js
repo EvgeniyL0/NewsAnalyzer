@@ -1,6 +1,8 @@
 export class NewsApi {
     constructor(apiToken) {
         this.apiToken = apiToken;
+        
+        this.getNews = this.getNews.bind(this);
     }
 
     getNews(keyword, date, callbackFunc) {

@@ -1,28 +1,29 @@
 import './pages/index.css';
 import './images/favicon.png';
-import './images/search-back.png';
+import './images/search-back.jpg';
 import './images/not-found.svg';
-import './images/sample.jpg';
 import './images/author.jpg';
 import './images/fb-icon.svg';
 import './images/github-icon.svg';
 import { NewsApi } from './js/modules/NewsApi.js';
 import { NewsCard } from './js/modules/NewsCard.js';
 import { NewsCardList } from './js/modules/NewsCardList.js';
-import { dateConversion } from './js/utils/stringConversion.js';
-import { FormValidator } from './js/modules/formValidator.js';
+import { dateConversion, cutDown } from './js/utils/stringConversion.js';
+import { API_KEY } from './js/constants/constants.js';
+import { SearchInput } from './js/modules/SearchInput';
 
 (function () {
-    const searchForm = document.forms.search;
-    const moreBtn = document.querySelector('.button_more');
     const resultsSection = document.querySelector('.results');
     const loadingSection = document.querySelector('.results__loading');
     const notFoundSection = document.querySelector('.results__not-found');
     const newsCardsSection = document.querySelector('.results__wrapper');
-    const requestNews = new NewsApi('a1a651d59146429db5b30e99c590b996');
+    const moreBtn = document.querySelector('.button_more');
+    const searchForm = document.forms.search;
+    const search = new SearchInput(searchForm, searchForm.elements.topic, searchForm.elements.search, moreBtn, 
+        { 'submit': searchHandler, 'click': moreNewsHandler, 'input': checkInputHandler });
+    const requestNews = new NewsApi(API_KEY);
     const card = new NewsCard();
-    const resultsList = new NewsCardList(document.querySelector('.results__news-cards'), document.querySelector('.section-header'));
-    const checkFormValidity = new FormValidator();
+    const resultsList = new NewsCardList(document.querySelector('.results__news-cards'), document.querySelector('.section-header'), moreBtn);
 
     function showLoading() {
         newsCardsSection.style.display = 'none';
@@ -36,7 +37,6 @@ import { FormValidator } from './js/modules/formValidator.js';
         loadingSection.style.display = 'none';
         if (isFound) {
             newsCardsSection.style.display = 'block';
-            moreBtn.addEventListener('click', moreNewsHandler);
         } else {
             notFoundSection.style.display = 'flex';
         }
@@ -47,17 +47,15 @@ import { FormValidator } from './js/modules/formValidator.js';
 
         startDate.setDate(startDate.getDate() - 6);
         event.preventDefault();
-        sessionStorage.removeItem('topic');
-        sessionStorage.removeItem('response');
+        sessionStorage.clear();
         showLoading();
         sessionStorage.setItem('topic', searchForm.elements.topic.value);
         requestNews.getNews(searchForm.elements.topic.value, `${startDate.getFullYear()}-${startDate.getMonth() + 1}-${startDate.getDate()}`,
             (data) => {
                 if (data.articles.length !== 0) {
                     sessionStorage.setItem('response', JSON.stringify(data));
-                    resultsList.renderCardList(true, JSON.parse(sessionStorage.getItem('response')).articles, document.createElement('div'), moreBtn,
-                        (article) => card.create(article.title, article.description, dateConversion(article.publishedAt), article.source.name, article.urlToImage, article.url)
-                    );
+                    resultsList.renderCardList(true, JSON.parse(sessionStorage.getItem('response')).articles, 
+                        (article) => card.create(article.title, cutDown(article.description, 150), dateConversion(article.publishedAt), article.source.name, article.urlToImage, article.url));
                     showResults(true);
                 } else {
                     showResults(false);
@@ -67,16 +65,14 @@ import { FormValidator } from './js/modules/formValidator.js';
     }
 
     function moreNewsHandler(event) {
-        resultsList.renderCardList(false, JSON.parse(sessionStorage.getItem('response')).articles, document.createElement('div'), event.target,
-            (article) => card.create(article.title, article.description, dateConversion(article.publishedAt), article.source.name, article.urlToImage, article.url)
-        );
+        resultsList.renderCardList(false, JSON.parse(sessionStorage.getItem('response')).articles, 
+            (article) => card.create(article.title, cutDown(article.description, 150), dateConversion(article.publishedAt), article.source.name, article.urlToImage, article.url));
     }
 
     function checkInputHandler(event) {
-        checkFormValidity.checkInput(event.target, searchForm.elements.search);
+        search.checkValidity();
     }
 
-    searchForm.addEventListener('submit', searchHandler);
-    searchForm.addEventListener('input', checkInputHandler);
-    
+    search.find();
+
 })();
