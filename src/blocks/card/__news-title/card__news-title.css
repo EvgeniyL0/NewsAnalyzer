@@ -1,15 +1,16 @@
 .card__news-title {
   margin: 0;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 26px;
   line-height: 30px;
   text-decoration: none;
   color: #1A1B22;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 948px) {
+@media screen and (max-width: 980px) {
   .card__news-title {
       font-size: 22px;
       line-height: 24px;  

@@ -1,8 +1,8 @@
-.diagram__bar_day_tue {
+.diagram__bar_day_1 {
   width: 10%;
 }
 
-.diagram__bar_day_tue::after {
+.diagram__bar_day_1::after {
   content: '10';
   margin-left: 6px;
 }

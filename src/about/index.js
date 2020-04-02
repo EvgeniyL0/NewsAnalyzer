@@ -5,5 +5,6 @@ import '../images/html-icon.svg';
 import '../images/css-icon.svg';
 import '../images/js-icon.svg';
 import '../images/webpack-icon.svg';
+import '../images/author.jpg';
 import '../images/fb-icon.svg';
 import '../images/github-icon.svg';

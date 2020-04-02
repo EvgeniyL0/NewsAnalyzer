@@ -17,8 +17,9 @@
       <header class="header">
         <p class="header__logo">NewsAnalyzer</p>
         <nav class="header__page-links">
-          <a href="./index.html" class="header__page header__page_theme_light header__page_current">Главная</a>
-          <a href="./about.html" class="header__page header__page_theme_light">О проекте</a>
+          <a href="./index.html" class="header__page header__page_active header__page_active_theme_light">Главная</a>
+          <a href="./about.html" class="header__page header__page_not-active header__page_not-active_theme_light">О
+            проекте</a>
         </nav>
       </header>
       <div class="section-content">
@@ -26,8 +27,8 @@
         <p class="content-subtitle content-subtitle_search">Введите в поиске любую тему и узнайте, насколько популярной
           она была в новостях за
           прошедшую неделю.</p>
-        <form class="search__form" name="search" novalidate>
-          <input type="text" class="search__input" name="topic" placeholder="Введите тему новости">
+        <form class="search__form" name="search">
+          <input type="text" class="search__input" name="topic" placeholder="Введите тему новости" required>
           <button type="submit" class="button button_search">Искать</button>
         </form>
       </div>
@@ -63,10 +64,9 @@
               <img src="./images/sample.jpg" alt="Иллюстрация" class="card__image">
               <div class="card__description">
                 <p class="card__date">2 августа, 2019</p>
-                <a href="" class="card__news-title">Национальное достояние - парки</a>
-                <p class="card__news-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                  складываться
-                  система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+                <a href="" class="card__news-title">Лесные огоньки: история одной фотографии</a>
+                <p class="card__news-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики,
+                  чтобы запечатлеть ускользающую красоту одного из местных чудес природы.
                 </p>
                 <p class="card__source">ЛЕНТА.РУ</p>
               </div>
@@ -75,10 +75,9 @@
               <img src="./images/sample.jpg" alt="Иллюстрация" class="card__image">
               <div class="card__description">
                 <p class="card__date">2 августа, 2019</p>
-                <a href="" class="card__news-title">Национальное достояние - парки</a>
-                <p class="card__news-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                  складываться
-                  система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+                <a href="" class="card__news-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</a>
+                <p class="card__news-text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
+                  необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
                 </p>
                 <p class="card__source">ЛЕНТА.РУ</p>
               </div>
@@ -90,7 +89,7 @@
     </section>
     <section class="author root__section">
       <div class="section-content section-content_author">
-        <img src="" alt="Фото автора" class="author__photo">
+        <img src="./images/author.jpg" alt="Фото автора" class="author__photo">
         <div class="author__about">
           <h2 class="content-title content-title_author">Об авторе</h2>
           <p class="author__about-text">Это блок с описаением автора проекта.</p>
@@ -99,14 +98,16 @@
     </section>
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Supersite</p>
-      <menu class="menu">
-        <a href="./index.html" class="menu__link">Главная</a>
-        <a href="./about.html" class="menu__link">О проекте</a>
-        <a href="https://praktikum.yandex.ru/" class="menu__link">Яндекс.Практикум</a>
-      </menu>
+      <ul class="footer__links">
+        <li><a href="./index.html" class="footer__link">Главная</a></li>
+        <li><a href="./about.html" class="footer__link">О проекте</a></li>
+        <li><a href="https://praktikum.yandex.ru/" class="footer__link" target="_blank">Яндекс.Практикум</a></li>
+      </ul>
       <ul class="footer__social">
-        <li><a href="https://github.com/EvgeniyL0"><img src="./images/github-icon.svg" alt="Github иконка" class="footer__social-icon"></a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=100022798724794"><img src="./images/fb-icon.svg" alt="Facebook иконка" class="footer__social-icon"></a></li>
+        <li><a href="https://github.com/EvgeniyL0" target="_blank"><img src="./images/github-icon.svg"
+              alt="Github иконка" class="footer__social-icon"></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100022798724794" target="_blank"><img
+              src="./images/fb-icon.svg" alt="Facebook иконка" class="footer__social-icon"></a></li>
       </ul>
     </footer>
   </div>

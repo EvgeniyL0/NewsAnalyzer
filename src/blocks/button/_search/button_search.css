@@ -9,6 +9,14 @@
   right: 0;
 }
 
+.button_search:hover {
+  background-color: #347EFF;
+}
+
+.button_search:active {
+  background-color: #2A65CC;
+}
+
 @media screen and (max-width: 425px) {
   .button_search {
     width: 100%;

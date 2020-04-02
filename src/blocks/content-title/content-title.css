@@ -8,7 +8,7 @@
 @import url(./_technologies/content-title_technologies.css);
 
 .content-title {
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
 }

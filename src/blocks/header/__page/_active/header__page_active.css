@@ -1,0 +1,6 @@
+@import url(./_theme/header__page_active_theme_dark.css);
+@import url(./_theme/header__page_active_theme_light.css);
+
+.header__page_active {
+  border-bottom: 3px solid;
+}

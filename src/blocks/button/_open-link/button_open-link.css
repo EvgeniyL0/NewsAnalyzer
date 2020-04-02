@@ -10,6 +10,11 @@
   display: none;
 }
 
+.button_open-link a {
+  color: black;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 425px) {
   .button_open-link {
     display: block;
