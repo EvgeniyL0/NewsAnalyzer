@@ -18,6 +18,7 @@ export class SearchInput {
 
   find() {
     this.inputElem.value = '';
+    this.submitBtn.setAttribute('disabled', '');
     this._setHandlers();
   }
 

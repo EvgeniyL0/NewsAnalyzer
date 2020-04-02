@@ -1,11 +1,3 @@
-@import url(./_number/diagram__bar_number_1.css);
-@import url(./_number/diagram__bar_number_2.css);
-@import url(./_number/diagram__bar_number_3.css);
-@import url(./_number/diagram__bar_number_4.css);
-@import url(./_number/diagram__bar_number_5.css);
-@import url(./_number/diagram__bar_number_6.css);
-@import url(./_number/diagram__bar_number_7.css);
-
 .diagram__bar {
     margin: 0;
     background-color: #2F71E5;

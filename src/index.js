@@ -55,7 +55,7 @@ import { SearchInput } from './js/modules/SearchInput';
                 if (data.articles.length !== 0) {
                     sessionStorage.setItem('response', JSON.stringify(data));
                     resultsList.renderCardList(true, JSON.parse(sessionStorage.getItem('response')).articles, 
-                        (article) => card.create(article.title, cutDown(article.description, 150), dateConversion(article.publishedAt), article.source.name, article.urlToImage, article.url));
+                        (article) => card.create(cutDown(article.title, 60), cutDown(article.description, 150), dateConversion(article.publishedAt), article.source.name, article.urlToImage, article.url));
                     showResults(true);
                 } else {
                     showResults(false);
@@ -66,7 +66,7 @@ import { SearchInput } from './js/modules/SearchInput';
 
     function moreNewsHandler(event) {
         resultsList.renderCardList(false, JSON.parse(sessionStorage.getItem('response')).articles, 
-            (article) => card.create(article.title, cutDown(article.description, 150), dateConversion(article.publishedAt), article.source.name, article.urlToImage, article.url));
+            (article) => card.create(cutDown(article.title, 60), cutDown(article.description, 150), dateConversion(article.publishedAt), article.source.name, article.urlToImage, article.url));
     }
 
     function checkInputHandler(event) {
