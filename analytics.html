@@ -8,7 +8,7 @@
     <meta name="author" content="Evgeniy Lobanov">
     <title>NewsAnalyzer</title>
     <link rel="icon" type="image/png" href="./images/favicon.png" />
-    <link rel="stylesheet" href="./assets/analytics.674dbc687a65d12efe2e.css">
+    <link rel="stylesheet" href="./assets/analytics.1d7b7fcd8d394f8808ae.css">
 </head>
 
 <body>
@@ -17,8 +17,8 @@
             <header class="header">
                 <p class="header__logo">NewsAnalyzer</p>
                 <nav class="header__page-links">
-                    <a href="./index.html" class="header__page header__page_theme_dark">Главная</a>
-                    <a href="./about.html" class="header__page header__page_theme_dark">О проекте</a>
+                    <a href="./index.html" class="header__page header__page_not-active header__page_not-active_theme_dark">Главная</a>
+                    <a href="./about.html" class="header__page header__page_not-active header__page_not-active_theme_dark">О проекте</a>
                 </nav>
             </header>
             <div class="section-content">
@@ -26,6 +26,9 @@
                     <li><a href="./index.html">Главная</a></li>
                     <li>Аналитика</li>
                 </ul>
+                <h1 class="content-title content-title_summary">Вы спросили: </h1>
+                <p class="summary__number-of-news">Новостей за неделю: </p>
+                <p class="summary__number-of-references">Упоминаний в заголовках: </p>
             </div>
         </section>
         <section class="details root__section">
@@ -36,13 +39,41 @@
                         <p class="diagram__column-name">ДАТА</p>
                         <p class="diagram__column-name">КОЛ-ВО УПОМИНАНИЙ</p>
                     </div>
-                    <p class="diagram__month"></p>
+                    <p class="diagram__month">(АВГУСТ)</p>
                     <div class="diagram__scale">
                         <p>0</p>
                         <p>25</p>
                         <p>50</p>
                         <p>75</p>
                         <p>100</p>
+                    </div>
+                    <div class="diagram__row diagram__row_first">
+                        <p class="diagram__row-name diagram__row-name_day_1">, пн</p>
+                        <div class="diagram__bar diagram__bar_day_1"></div>
+                    </div>
+                    <div class="diagram__row">
+                        <p class="diagram__row-name diagram__row-name_day_2">, вт</p>
+                        <div class="diagram__bar diagram__bar_day_2"></div>
+                    </div>
+                    <div class="diagram__row">
+                        <p class="diagram__row-name diagram__row-name_day_3">, ср</p>
+                        <div class="diagram__bar diagram__bar_day_3"></div>
+                    </div>
+                    <div class="diagram__row">
+                        <p class="diagram__row-name diagram__row-name_day_4">, чт</p>
+                        <div class="diagram__bar diagram__bar_day_4"></div>
+                    </div>
+                    <div class="diagram__row">
+                        <p class="diagram__row-name diagram__row-name_day_5">, пт</p>
+                        <div class="diagram__bar diagram__bar_day_5"></div>
+                    </div>
+                    <div class="diagram__row">
+                        <p class="diagram__row-name diagram__row-name_day_6">, сб</p>
+                        <div class="diagram__bar diagram__bar_day_6"></div>
+                    </div>
+                    <div class="diagram__row">
+                        <p class="diagram__row-name diagram__row-name_day_7">, вс</p>
+                        <div class="diagram__bar diagram__bar_day_7"></div>
                     </div>
                     <div class="diagram__scale">
                         <p>0</p>
@@ -67,7 +98,7 @@
             </ul>
         </footer>
     </div>
-    <script type="module" src="./assets/index.bc49a26ebc6aa9b338a8.js"></script>
+    <script type="module" src="./assets/analytics.58d83c547b5fd8e3224c.js"></script>
 </body>
 
 </html>
