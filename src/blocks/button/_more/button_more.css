@@ -8,7 +8,7 @@
   border-radius: 80px;
 }
 
-.button_more:active {
+.button_more:hover {
   opacity: 0.9;
 }
 
