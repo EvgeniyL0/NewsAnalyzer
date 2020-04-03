@@ -1,6 +1,6 @@
 .card__description {
   width: 88%;
-  height: 260px;
+  min-height: 260px;
   margin-left: auto;
   margin-top: 24px;
   margin-right: auto;

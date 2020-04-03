@@ -1,6 +1,5 @@
-@import url(./_current/header__page_current.css);
-@import url(./_theme/header__page_theme_dark.css);
-@import url(./_theme/header__page_theme_light.css);
+@import url(./_active/header__page_active.css);
+@import url(./_not-active/header__page_not-active.css);
 
 .header__page {
   padding-bottom: 27px;

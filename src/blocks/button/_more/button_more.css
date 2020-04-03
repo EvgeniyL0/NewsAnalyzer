@@ -8,6 +8,10 @@
   border-radius: 80px;
 }
 
+.button_more:hover {
+  opacity: 0.9;
+}
+
 @media screen and (max-width: 768px) {
   .button_more {
     width: 240px;

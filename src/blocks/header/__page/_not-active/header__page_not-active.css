@@ -1,0 +1,6 @@
+@import url(./_theme/header__page_not-active_theme_dark.css);
+@import url(./_theme/header__page_not-active_theme_light.css);
+
+.header__page_not-active {
+  color: #B6BCBF;
+}
