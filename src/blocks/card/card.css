@@ -1,0 +1,11 @@
+@import url(./__date/card__date.css);
+@import url(./__description/card__description.css);
+@import url(./__image/card__image.css);
+@import url(./__news-text/card__news-text.css);
+@import url(./__news-title/card__news-title.css);
+@import url(./__source/card__source.css);
+
+.card {
+    border-radius: 16px;
+    background-color: white;
+}

@@ -1,0 +1,20 @@
+.commits__text {
+  max-height: 122px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 768px) {
+  .commits__text {
+    max-height: 76px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .commits__text {
+    max-height: 122px;
+  }
+}

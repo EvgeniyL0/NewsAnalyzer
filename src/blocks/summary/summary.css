@@ -1,0 +1,7 @@
+@import url(./__number-of-news/summary__number-of-news.css);
+@import url(./__number-of-references/summary__number-of-references.css);
+
+.summary {
+    padding-top: 0;
+    color: #1A1B22;
+}

@@ -1,0 +1,9 @@
+@import url(./__loading/results__loading.css);
+@import url(./__news-cards/results__news-cards.css);
+@import url(./__not-found-image/results__not-found-image.css);
+@import url(./__wrapper/results__wrapper.css);
+
+.results {
+    background-color: #F5F6F7;
+    color: #1A1B22;
+}

@@ -1,0 +1,9 @@
+.section-content_author {
+    display: flex;
+}
+
+@media screen and (max-width: 592px) {
+    .section-content_author {
+        flex-direction: column;
+    }
+}

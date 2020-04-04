@@ -1,0 +1,8 @@
+.diagram__bar_day_7 {
+  width: 0%;
+}
+
+.diagram__bar_day_7::after {
+  content: '';
+  margin-left: 6px;
+}

@@ -1,0 +1,11 @@
+.diagram__scale {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 104px;
+}
+
+@media screen and (max-width: 425px) {
+    .diagram__scale {
+        display: none;
+    }
+}

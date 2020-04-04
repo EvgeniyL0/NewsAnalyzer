@@ -1,0 +1,14 @@
+@import url(./_author/section-content_author.css);
+@import url(./_tech/section-content_tech.css);
+
+.section-content {
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .section-content {
+        width: 90%;
+    }
+}

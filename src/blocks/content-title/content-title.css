@@ -1,0 +1,14 @@
+@import url(./_author/content-title_author.css);
+@import url(./_details/content-title_details.css);
+@import url(./_load/content-title_load.css);
+@import url(./_for-customers/content-title_for-customers.css);
+@import url(./_search/content-title_search.css);
+@import url(./_section-header/content-title_section-header.css);
+@import url(./_summary/content-title_summary.css);
+@import url(./_technologies/content-title_technologies.css);
+
+.content-title {
+  font-family: 'Roboto Slab', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}

@@ -1,0 +1,9 @@
+.section-content_tech {
+    display: flex;
+}
+
+@media screen and (max-width: 1303px) {
+    .section-content_tech {
+        flex-direction: column;
+    }
+}

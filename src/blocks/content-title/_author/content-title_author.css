@@ -1,0 +1,15 @@
+.content-title_author {
+  margin-top: 51px;
+  margin-bottom: 24px;
+  font-size: 40px;
+  line-height: 46px;
+}
+
+@media screen and (max-width: 768px) {
+  .content-title_author {
+    font-size: 30px;
+    line-height: 40px;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }  
+}

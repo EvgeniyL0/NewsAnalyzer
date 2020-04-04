@@ -1,0 +1,31 @@
+@import url(./_active/header__page_active.css);
+@import url(./_not-active/header__page_not-active.css);
+
+.header__page {
+  padding-bottom: 27px;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.header__page:last-of-type {
+  margin-left: 34px;
+}
+
+@media screen and (max-width: 768px) {
+  .header__page {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header__page {
+    padding-bottom: 14px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .header__page:last-of-type {
+    margin-left: 11px;
+  }
+}

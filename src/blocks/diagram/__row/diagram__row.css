@@ -1,0 +1,15 @@
+.diagram__row {
+    margin-top: 56px;
+    margin-bottom: 0;
+    display: flex;
+}
+
+.diagram__row_first {
+    margin-top: 0;
+}
+
+@media screen and (max-width: 425px) {
+    .diagram__row {
+        margin-top: 24px;
+    }
+}

@@ -1,0 +1,11 @@
+.diagram__month {
+  margin: 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #1A1B22; 
+}
+
+@media screen and (max-width: 425px) {
+  .diagram__month {
+    padding-bottom: 8px;
+  }
+}

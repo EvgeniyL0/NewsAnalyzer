@@ -1,0 +1,9 @@
+.for-customers__paragraph {
+    max-width: 815px;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.for-customers__paragraph:last-of-type {
+    margin-bottom: 0;
+}

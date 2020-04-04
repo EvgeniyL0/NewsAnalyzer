@@ -1,0 +1,6 @@
+.results__not-found-image {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 24px;
+  object-fit: cover;
+}

@@ -1,0 +1,21 @@
+.results__news-cards {
+    margin-top: 0;
+    margin-bottom: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-gap: 16px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .results__news-cards {
+        margin-bottom: 22px;
+        grid-gap: 8px;
+    } 
+}
+
+@media screen and (max-width: 680px) {
+    .results__news-cards {
+        grid-template-columns: 1fr;
+    }
+}

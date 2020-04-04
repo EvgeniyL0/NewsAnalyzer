@@ -1,0 +1,25 @@
+.button_more {
+  display: block;
+  width: 288px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border: none;
+  border-radius: 80px;
+}
+
+.button_more:hover {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .button_more {
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .button_more {
+    width: 288px;
+  }
+}

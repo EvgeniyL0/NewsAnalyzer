@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="news analyzer">
+    <meta name="author" content="Evgeniy Lobanov">
+    <title>NewsAnalyzer</title>
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css%>">
+</head>
+
+<body>
+    <div class="root">
+        <section class="summary root__section">
+            <header class="header">
+                <p class="header__logo">NewsAnalyzer</p>
+                <nav class="header__page-links">
+                    <a href="./index.html" class="header__page header__page_not-active header__page_not-active_theme_dark">Главная</a>
+                    <a href="./about.html" class="header__page header__page_not-active header__page_not-active_theme_dark">О проекте</a>
+                </nav>
+            </header>
+            <div class="section-content">
+                <ul class="path path_summary">
+                    <li><a href="./index.html">Главная</a></li>
+                    <li>Аналитика</li>
+                </ul>
+                <h1 class="content-title content-title_summary">Вы спросили: </h1>
+                <p class="summary__number-of-news">Новостей за неделю: </p>
+                <p class="summary__number-of-references">Упоминаний в заголовках: </p>
+            </div>
+        </section>
+        <section class="details root__section">
+            <div class="section-content">
+                <h2 class="content-title content-title_details">Аналитика по дням</h2>
+                <div class="diagram">
+                    <div class="diagram__columns">
+                        <p class="diagram__column-name">ДАТА</p>
+                        <p class="diagram__column-name">КОЛ-ВО УПОМИНАНИЙ</p>
+                    </div>
+                    <p class="diagram__month">(АВГУСТ)</p>
+                    <div class="diagram__scale">
+                        <p>0</p>
+                        <p>25</p>
+                        <p>50</p>
+                        <p>75</p>
+                        <p>100</p>
+                    </div>
+                    <div class="diagram__row diagram__row_first">
+                        <p class="diagram__row-name diagram__row-name_day_1">, пн</p>
+                        <div class="diagram__bar diagram__bar_day_1"></div>
+                    </div>
+                    <div class="diagram__row">
+                        <p class="diagram__row-name diagram__row-name_day_2">, вт</p>
+                        <div class="diagram__bar diagram__bar_day_2"></div>
+                    </div>
+                    <div class="diagram__row">
+                        <p class="diagram__row-name diagram__row-name_day_3">, ср</p>
+                        <div class="diagram__bar diagram__bar_day_3"></div>
+                    </div>
+                    <div class="diagram__row">
+                        <p class="diagram__row-name diagram__row-name_day_4">, чт</p>
+                        <div class="diagram__bar diagram__bar_day_4"></div>
+                    </div>
+                    <div class="diagram__row">
+                        <p class="diagram__row-name diagram__row-name_day_5">, пт</p>
+                        <div class="diagram__bar diagram__bar_day_5"></div>
+                    </div>
+                    <div class="diagram__row">
+                        <p class="diagram__row-name diagram__row-name_day_6">, сб</p>
+                        <div class="diagram__bar diagram__bar_day_6"></div>
+                    </div>
+                    <div class="diagram__row">
+                        <p class="diagram__row-name diagram__row-name_day_7">, вс</p>
+                        <div class="diagram__bar diagram__bar_day_7"></div>
+                    </div>
+                    <div class="diagram__scale">
+                        <p>0</p>
+                        <p>25</p>
+                        <p>50</p>
+                        <p>75</p>
+                        <p>100</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p class="footer__copyright">&copy; 2020 Supersite</p>
+            <ul class="footer__links">
+                <li><a href="./index.html" class="footer__link">Главная</a></li>
+                <li><a href="./about.html" class="footer__link">О проекте</a></li>
+                <li><a href="https://praktikum.yandex.ru/" class="footer__link" target="_blank">Яндекс.Практикум</a></li>
+            </ul>
+            <ul class="footer__social">
+                <li><a href="https://github.com/EvgeniyL0" target="_blank"><img src="./images/github-icon.svg" alt="Github иконка" class="footer__social-icon"></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100022798724794" target="_blank"><img src="./images/fb-icon.svg" alt="Facebook иконка" class="footer__social-icon"></a></li>
+            </ul>
+        </footer>
+    </div>
+    <script type="module" src="<%=htmlWebpackPlugin.files.chunks.analytics.entry%>"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+@import url(./_load/content-subtitle_load.css);
+@import url(./_search/content-subtitle_search.css);
+
+.content-subtitle {
+  margin-right: auto;
+  margin-top: 0;
+  margin-left: auto;
+}

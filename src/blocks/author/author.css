@@ -1,0 +1,6 @@
+@import url(./__about-text/author__about-text.css);
+@import url(./__photo/author__photo.css);
+
+.author {
+  color: #1A1B22;
+}

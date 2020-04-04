@@ -1,0 +1,24 @@
+@import url(./_summary/path_summary.css);
+
+.path {
+    padding: 0;
+}
+
+.path li {
+    display: inline-block;
+}
+
+.path li:last-of-type {
+    color: #B6BCBF;
+}
+
+.path li a {
+    text-decoration: none;
+    color: #1A1B22;
+}
+
+.path li a::after{
+    content: '/';
+    margin-left: 5px;
+    color: #B6BCBF;
+}

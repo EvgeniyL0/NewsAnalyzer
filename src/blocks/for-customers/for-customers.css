@@ -1,0 +1,7 @@
+@import url(./__paragraph/for-customers__paragraph.css);
+@import url(./__text/for-customers__text.css);
+
+.for-customers {
+    padding-top: 0;
+    color: #1A1B22;
+}

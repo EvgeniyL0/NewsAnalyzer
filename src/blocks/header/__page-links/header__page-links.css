@@ -1,0 +1,18 @@
+.header__page-links {
+  margin-left: 0;
+  margin-top: 30px;
+  margin-right: 7%;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .header__page-links {
+    margin-top: 22px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header__page-links {
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,21 @@
+@import url(./_day/diagram__row-name_day_1.css);
+@import url(./_day/diagram__row-name_day_2.css);
+@import url(./_day/diagram__row-name_day_3.css);
+@import url(./_day/diagram__row-name_day_4.css);
+@import url(./_day/diagram__row-name_day_5.css);
+@import url(./_day/diagram__row-name_day_6.css);
+@import url(./_day/diagram__row-name_day_7.css);
+
+.diagram__row-name {
+    width: 104px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+}
+
+@media screen and (max-width: 425px) {
+    .diagram__row-name {
+        width: 80px;
+    }
+}

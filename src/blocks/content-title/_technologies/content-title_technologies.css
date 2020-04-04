@@ -1,0 +1,22 @@
+.content-title_technologies {
+    max-width: 344px;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 176px;
+    margin-bottom: 0;
+    font-size: 40px;
+    line-height: 46px;
+}
+
+@media screen and (max-width: 1320px) {
+    .content-title_technologies {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content-title_technologies{
+        font-size: 30px;
+        line-height: 34px;
+    }
+}

@@ -1,0 +1,9 @@
+@import url(./__image/technologies__image.css);
+@import url(./__item/technologies__item.css);
+@import url(./__list/technologies__list.css);
+@import url(./__name/technologies__name.css);
+
+.technologies {
+    background-color: #F5F6F7;
+    color: #1A1B22;
+}

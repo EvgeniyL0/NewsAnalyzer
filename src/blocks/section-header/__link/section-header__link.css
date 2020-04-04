@@ -1,0 +1,17 @@
+@import url(./_commits/section-header__link_commits.css);
+
+.section-header__link {
+  margin-top: 20px;
+  margin-bottom: 72px;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #1A1B22;
+}
+
+@media screen and (max-width: 768px) {
+  .section-header__link {
+      margin-top: 8px;
+      margin-bottom: 34px;
+  }
+}
