@@ -1,5 +1,7 @@
 export class CommitCard {
-  constructor() { }
+  constructor() {
+    this.create = this.create.bind(this);
+  }
 
   create(date, authorPhoto, authorName, authorEmail, commitText) {
     let commitMarkup =

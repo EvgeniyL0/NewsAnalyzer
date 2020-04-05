@@ -1,5 +1,7 @@
 export class NewsCard {
-    constructor() { }
+    constructor() {
+        this.create = this.create.bind(this);
+    }
 
     create(title, text, data, source, image, url) {
         let cardMarkup =
