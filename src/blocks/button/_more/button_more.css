@@ -9,7 +9,7 @@
 }
 
 .button_more:hover {
-  opacity: 0.9;
+  background-color: #f0f0f0;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,6 +1,6 @@
 import './pages/index.css';
 import './images/favicon.png';
-import './images/search-back.jpg';
+import './images/search-back.png';
 import './images/not-found.svg';
 import './images/author.jpg';
 import './images/fb-icon.svg';
@@ -17,20 +17,43 @@ import { SearchInput } from './js/modules/SearchInput';
     const loadingSection = document.querySelector('.results__loading');
     const notFoundSection = document.querySelector('.results__not-found');
     const newsCardsSection = document.querySelector('.results__wrapper');
-    const moreBtn = document.querySelector('.button_more');
+    const moreButton = document.querySelector('.button_more');
     const searchForm = document.forms.search;
-    const search = new SearchInput(searchForm, searchForm.elements.topic, searchForm.elements.search, moreBtn, 
-        { 'submit': searchHandler, 'click': moreNewsHandler, 'input': checkInputHandler });
+    const searchFormInput = searchForm.elements.topic;
+    const searchFormSubmit = searchForm.elements.submit;
+
+    const search = new SearchInput(
+        [{
+            target: searchForm, 
+            event: 'submit', 
+            handler: searchHandler
+        }], 
+        searchForm, 
+        searchFormInput, 
+        searchFormSubmit
+    );
+
     const requestNews = new NewsApi(API_KEY);
+
     const card = new NewsCard();
-    const resultsList = new NewsCardList(document.querySelector('.results__news-cards'), document.querySelector('.section-header'), moreBtn);
+
+    const resultsList = new NewsCardList(
+        [{
+            target: moreButton,
+            event: 'click',
+            handler: showMoreHandler
+        }], 
+        document.querySelector('.results__news-cards'), 
+        document.querySelector('.section-header'), 
+        moreButton
+    );
 
     function showLoading() {
         newsCardsSection.style.display = 'none';
         notFoundSection.style.display = 'none';
         resultsSection.style.display = 'block';
         loadingSection.style.display = 'flex';
-        searchForm.elements.search.setAttribute('disabled', '');
+        searchFormSubmit.setAttribute('disabled', '');
     }
 
     function showResults(isFound) {
@@ -42,15 +65,14 @@ import { SearchInput } from './js/modules/SearchInput';
         }
     }
 
-    function searchHandler(event) {
+    function sendRequest() {
         let startDate = new Date();
 
         startDate.setDate(startDate.getDate() - 6);
-        event.preventDefault();
         sessionStorage.clear();
         showLoading();
-        sessionStorage.setItem('topic', searchForm.elements.topic.value);
-        requestNews.getNews(searchForm.elements.topic.value, `${startDate.getFullYear()}-${startDate.getMonth() + 1}-${startDate.getDate()}`,
+        sessionStorage.setItem('topic', searchFormInput.value);
+        requestNews.getNews(searchFormInput.value, `${startDate.getFullYear()}-${startDate.getMonth() + 1}-${startDate.getDate()}`,
             (data) => {
                 if (data.articles.length !== 0) {
                     sessionStorage.setItem('response', JSON.stringify(data));
@@ -60,17 +82,19 @@ import { SearchInput } from './js/modules/SearchInput';
                 } else {
                     showResults(false);
                 }
-                searchForm.elements.search.removeAttribute('disabled');
-            });
+                searchFormSubmit.removeAttribute('disabled');
+            }
+        );
     }
 
-    function moreNewsHandler(event) {
+    function searchHandler(event) {
+        event.preventDefault();
+        search.checkValidity(sendRequest);
+    }
+
+    function showMoreHandler(event) {
         resultsList.renderCardList(false, JSON.parse(sessionStorage.getItem('response')).articles, 
             (article) => card.create(cutDown(article.title, 60), cutDown(article.description, 150), dateConversion(article.publishedAt), article.source.name, article.urlToImage, article.url));
-    }
-
-    function checkInputHandler(event) {
-        search.checkValidity();
     }
 
     search.find();

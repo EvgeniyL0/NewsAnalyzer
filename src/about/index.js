@@ -10,10 +10,11 @@ import '../images/github-icon.svg';
 import { CommitCard } from '../js/modules/CommitCard.js';
 import { CommitCardList } from '../js/modules/CommitCardList.js';
 import { GithubApi } from '../js/modules/GithubApi.js';
+import { URL_GITHUB_COMMITS } from '../js/constants/constants.js';
 import { dateConversion } from '../js/utils/stringConversion.js';
 
 (function () {
-  const requestCommits = new GithubApi();
+  const requestCommits = new GithubApi(URL_GITHUB_COMMITS);
   const commit = new CommitCard();
   const commitsList = new CommitCardList(document.querySelector('.main-carousel'));
   const Flickity = require('flickity');

@@ -1,37 +1,31 @@
-export class SearchInput {
-  constructor(form, inputElem, submitBtn, showMoreBtn, eventHandlers) {
+import { BaseComponent } from './BaseComponent.js';
+
+export class SearchInput extends BaseComponent {
+  constructor(eventHandlers, form, inputElem, submitBtn) {
+    super(eventHandlers);
     this.form = form;
     this.inputElem = inputElem;
     this.submitBtn = submitBtn;
-    this.showMoreBtn =showMoreBtn;
-    this.eventHandlers = eventHandlers;
 
     this.find = this.find.bind(this);
     this.checkValidity = this.checkValidity.bind(this);
   }
 
-  _setHandlers() {
-    this.form.addEventListener('submit', this.eventHandlers['submit']);
-    this.form.addEventListener('input', this.eventHandlers['input']);
-    this.showMoreBtn.addEventListener('click', this.eventHandlers['click']);
-  }
-
   find() {
     this.inputElem.value = '';
-    this.submitBtn.setAttribute('disabled', '');
-    this._setHandlers();
+    this._setHandlers(this.form);
   }
 
-  checkValidity() {
+  checkValidity(requestFunc) {
     if (this.inputElem.validity.valueMissing) {
-      this.inputElem.setAttribute('placeholder', 'Вы не ввели тему');
-      this.inputElem.style.color = 'red';
       this.submitBtn.setAttribute('disabled', '');
+      this.inputElem.style.animationPlayState = 'running';
+      setTimeout(() => {
+        this.inputElem.style.animationPlayState = 'paused';
+        this.submitBtn.removeAttribute('disabled');
+      }, 500);
     } else {
-      this.inputElem.setAttribute('placeholder', 'Введите тему новости');
-      this.inputElem.style.color = 'black';
-      this.submitBtn.removeAttribute('disabled')
+      requestFunc();
     }
   }
-  
 }
