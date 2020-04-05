@@ -9,9 +9,3 @@
     margin-top: 0;
     margin-bottom: 0; 
 }
-
-@media screen and (max-width: 425px) {
-    .diagram__bar p {
-        display: none;
-    }
-}

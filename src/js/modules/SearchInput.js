@@ -19,11 +19,11 @@ export class SearchInput extends BaseComponent {
   checkValidity(requestFunc) {
     if (this.inputElem.validity.valueMissing) {
       this.submitBtn.setAttribute('disabled', '');
-      this.inputElem.style.animationPlayState = 'running';
+      this.inputElem.style.animationName = 'blink';
       setTimeout(() => {
-        this.inputElem.style.animationPlayState = 'paused';
+        this.inputElem.style.animationName = '';
         this.submitBtn.removeAttribute('disabled');
-      }, 500);
+      }, 1000);
     } else {
       requestFunc();
     }

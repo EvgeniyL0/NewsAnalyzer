@@ -4,7 +4,7 @@
   }
 
   50% {
-    background-color: #edcaca;
+    background-color: #f29999;
   }
 
   100% {
@@ -24,11 +24,10 @@
   background-color: white;
   font-size: 16px;
   line-height: 22px;
-  animation-name: blink;
-  animation-duration: 0.5s;
+  animation-name: '';
+  animation-duration: 0.7s;
   animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-play-state: paused;
+  animation-iteration-count: 1;
 }
 
 @media screen and (max-width: 768px) {

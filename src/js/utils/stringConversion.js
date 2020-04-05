@@ -4,7 +4,7 @@ function dateConversion(originalString) {
   return `${dateInMs.toLocaleString('ru', { day: 'numeric', month: 'long'})}, ${dateInMs.getFullYear()}`;
 }
 
-function cutDown(originalString, newStringLength) {
+function cutDown(originalString, newStringLength) { 
   if (originalString.length > newStringLength) {
     return `${originalString.substr(0, newStringLength)}...`;
   } else {
