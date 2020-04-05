@@ -8,7 +8,7 @@
   <meta name="author" content="Evgeniy Lobanov">
   <title>NewsAnalyzer</title>
   <link rel="icon" type="image/png" href="./images/favicon.png" />
-  <link rel="stylesheet" href="./assets/styles/index.4bce310b403b825bcf37.css">
+  <link rel="stylesheet" href="./assets/styles/index.9e4729e5c9ba65a2d139.css">
 </head>
 
 <body>
@@ -27,9 +27,9 @@
         <p class="content-subtitle content-subtitle_search">Введите в поиске любую тему и узнайте, насколько популярной
           она была в новостях за
           прошедшую неделю.</p>
-        <form class="search__form" name="search">
+        <form class="search__form" name="search" novalidate>
           <input type="text" class="search__input" name="topic" placeholder="Введите тему новости" required>
-          <button type="submit" class="button button_search">Искать</button>
+          <button type="submit" class="button button_search" name="submit">Искать</button>
         </form>
       </div>
     </section>
@@ -37,52 +37,19 @@
       <div class="section-content">
         <div class="results__loading">
           <div class="loader"></div>
-          <p class="content-subtitle content-subtitle_load">Идёт загрузка...</p>
+          <p class="content-subtitle content-subtitle_loading">Идёт загрузка...</p>
+        </div>
+        <div class="results__not-found">
           <img src="./images/not-found.svg" alt="Не найдено" class="results__not-found-image">
-          <h2 class="content-title content-title_load">Ничего не найдено</h2>
-          <p class="content-subtitle content-subtitle_load">К сожалению по вашему запросу ничего не найдено</p>
+          <h2 class="content-title content-title_loading">Ничего не найдено</h2>
+          <p class="content-subtitle content-subtitle_loading">К сожалению по вашему запросу ничего не найдено</p>
         </div>
         <div class="results__wrapper">
           <div class="section-header">
             <h2 class="content-title content-title_section-header">Результаты поиска</h2>
             <a href="./analytics.html" class="section-header__link">Посмотреть аналитику &gt;</a>
           </div>
-          <div class="results__news-cards">
-            <div class="card">
-              <img src="./images/sample.jpg" alt="Иллюстрация" class="card__image">
-              <div class="card__description">
-                <p class="card__date">2 августа, 2019</p>
-                <a href="" class="card__news-title">Национальное достояние - парки</a>
-                <p class="card__news-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                  складываться
-                  система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                </p>
-                <p class="card__source">ЛЕНТА.РУ</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./images/sample.jpg" alt="Иллюстрация" class="card__image">
-              <div class="card__description">
-                <p class="card__date">2 августа, 2019</p>
-                <a href="" class="card__news-title">Лесные огоньки: история одной фотографии</a>
-                <p class="card__news-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики,
-                  чтобы запечатлеть ускользающую красоту одного из местных чудес природы.
-                </p>
-                <p class="card__source">ЛЕНТА.РУ</p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="./images/sample.jpg" alt="Иллюстрация" class="card__image">
-              <div class="card__description">
-                <p class="card__date">2 августа, 2019</p>
-                <a href="" class="card__news-title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</a>
-                <p class="card__news-text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о
-                  необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
-                </p>
-                <p class="card__source">ЛЕНТА.РУ</p>
-              </div>
-            </div>
-          </div>
+          <div class="results__news-cards"></div>
           <button class="button button_more">Показать ещё</button>
         </div>
       </div>
@@ -104,14 +71,14 @@
         <li><a href="https://praktikum.yandex.ru/" class="footer__link" target="_blank">Яндекс.Практикум</a></li>
       </ul>
       <ul class="footer__social">
-        <li><a href="https://github.com/EvgeniyL0" target="_blank"><img src="./images/github-icon.svg"
-              alt="Github иконка" class="footer__social-icon"></a></li>
-        <li><a href="https://www.facebook.com/profile.php?id=100022798724794" target="_blank"><img
-              src="./images/fb-icon.svg" alt="Facebook иконка" class="footer__social-icon"></a></li>
+        <li><a href="https://github.com/EvgeniyL0" target="_blank"><img src="./images/github-icon.svg" alt="Github иконка"
+              class="footer__social-icon"></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100022798724794" target="_blank"><img src="./images/fb-icon.svg"
+              alt="Facebook иконка" class="footer__social-icon"></a></li>
       </ul>
     </footer>
   </div>
-  <script type="module" src="./assets/js/index.922d66422f74b3dbda1f.js"></script>
+  <script type="module" src="./assets/js/index.1e54afc9febfe132cdad.js"></script>
 </body>
 
 </html>
