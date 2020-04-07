@@ -1,8 +1,8 @@
 import { BaseComponent } from './BaseComponent.js';
 
 export class NewsCardList extends BaseComponent {
-  constructor(eventHandlers, cardsContainer, previousElem, showMoreButton) {
-    super(eventHandlers);
+  constructor(eventHandlers, divElement, cardsContainer, previousElem, showMoreButton) {
+    super(eventHandlers, divElement);
     this.cardsContainer = cardsContainer;
     this.previousElem = previousElem;
     this.showMoreButton =showMoreButton;
@@ -33,7 +33,7 @@ export class NewsCardList extends BaseComponent {
       }
       threeCardsMarkup += createCardMethod(arrayOfArticles[i]);
     }
-    this.cardsContainer.insertAdjacentHTML('beforeend', threeCardsMarkup);
+    this.cardsContainer.insertAdjacentHTML('beforeend', this._sanitize(threeCardsMarkup));
     this._startPosition += 3;
   }
 }

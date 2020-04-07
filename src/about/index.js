@@ -13,44 +13,71 @@ import { GithubApi } from '../js/modules/GithubApi.js';
 import { URL_GITHUB_COMMITS } from '../js/constants/constants.js';
 import { dateConversion } from '../js/utils/stringConversion.js';
 
-(function () {
-  const errorTitle = document.querySelector('.content-title_commits');
-  const errorSubtitle = document.querySelector('.content-subtitle_commits');
-  const requestCommits = new GithubApi(URL_GITHUB_COMMITS);
-  const commit = new CommitCard();
-  const commitsList = new CommitCardList(document.querySelector('.main-carousel'));
-  const Flickity = require('flickity');
-  let flkty;
+const errorTitle = document.querySelector('.content-title_commits');
+const errorSubtitle = document.querySelector('.content-subtitle_commits');
+const requestCommits = new GithubApi(URL_GITHUB_COMMITS);
+const commit = new CommitCard();
+const commitsList = new CommitCardList(
+  [],
+  document.createElement('div'),
+  document.querySelector('.main-carousel')
+);
+const Flickity = require('flickity');
+let flkty;
 
-  errorTitle.style.display = 'none';
-  errorSubtitle.style.display = 'none';
+errorTitle.style.display = 'none';
+errorSubtitle.style.display = 'none';
 
-  function showError(errorText) {
-    errorSubtitle.textContent = errorText;
-    errorTitle.style.display = 'block';
-    errorSubtitle.style.display = 'block';
-  }
-  
-  requestCommits.getCommits(
-    (data) => {
+function showError(errorText) {
+  errorSubtitle.textContent = errorText;
+  errorTitle.style.display = 'block';
+  errorSubtitle.style.display = 'block';
+}
+
+requestCommits.getCommits()
+  .then(data => {
+    if (typeof data === 'string') {
+      showError(data)
+    } else {
       commitsList.renderCommitsList(
-        data, 
-        (dataElem) => commit.create(
-          dateConversion(dataElem.commit.committer.date), 
-          dataElem.author.avatar_url, 
-          dataElem.commit.committer.name, 
-          dataElem.commit.committer.email, 
+        data,
+        dataElem => commit.create(
+          dateConversion(dataElem.commit.committer.date),
+          dataElem.author.avatar_url,
+          dataElem.commit.committer.name,
+          dataElem.commit.committer.email,
           dataElem.commit.message
         )
       );
-      flkty = new Flickity( '.main-carousel', {
+
+      flkty = new Flickity('.main-carousel', {
         cellAlign: 'left',
         contain: true,
         pageDots: false
-      });
-    },
-    (err) => {
-      showError(err);
+      })
     }
-  );
-})();
+  });
+
+/*
+requestCommits.getCommits(
+  (data) => {
+    commitsList.renderCommitsList(
+      data,
+      (dataElem) => commit.create(
+        dateConversion(dataElem.commit.committer.date),
+        dataElem.author.avatar_url,
+        dataElem.commit.committer.name,
+        dataElem.commit.committer.email,
+        dataElem.commit.message
+      )
+    );
+    flkty = new Flickity('.main-carousel', {
+      cellAlign: 'left',
+      contain: true,
+      pageDots: false
+    });
+  },
+  (err) => {
+    showError(err);
+  }
+);*/

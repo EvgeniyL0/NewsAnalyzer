@@ -4,7 +4,7 @@ export class CommitCard {
   }
 
   create(date, authorPhoto, authorName, authorEmail, commitText) {
-    let commitMarkup =
+    const commitMarkup =
       `<div class="carousel-cell">
         <p class="commits__date">${date}</p>
         <div class="commits__about-author">
@@ -17,6 +17,6 @@ export class CommitCard {
         <p class="commits__text">${commitText}</p>
       </div>`
 
-    return commitMarkup
+    return commitMarkup;
   }
 }

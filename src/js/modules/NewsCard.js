@@ -4,7 +4,7 @@ export class NewsCard {
     }
 
     create(title, text, data, source, image, url) {
-        let cardMarkup =
+        const cardMarkup =
             `<div class="card">
                 <img src="${image}" alt="" class="card__image">
                 <div class="card__description">

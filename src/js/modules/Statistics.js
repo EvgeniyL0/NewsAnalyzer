@@ -1,5 +1,8 @@
-export class Statistics {
-  constructor(topic, numberOfNews, articles) {
+import { BaseComponent } from './BaseComponent.js';
+
+export class Statistics extends BaseComponent {
+  constructor(eventHandlers, divElement, topic, numberOfNews, articles) {
+    super(eventHandlers, divElement);
     this.topic = topic;
     this.numberOfNews = numberOfNews;
     this.articles = articles;
@@ -11,39 +14,44 @@ export class Statistics {
     let refTotal = 0;
     let dailyResults = {};
 
-    for (let i = 0; i < this.articles.length; i++) {
-      let publishDate = new Date(Date.parse(this.articles[i].publishedAt));
+    this.articles.forEach((item) => {
+      let publishDate = new Date(Date.parse(item.publishedAt));
       let publishDay = publishDate.getDate();
 
-      if (this.articles[i].title.toLowerCase().includes(this.topic)) {
+      if (item.title.toLowerCase().includes(this.topic)) {
         refTotal += 1;
       }
   
-      if (this.articles[i].title.toLowerCase().includes(this.topic) || this.articles[i].description.toLowerCase().includes(this.topic)) {
+      if (item.title.toLowerCase().includes(this.topic) || item.description.toLowerCase().includes(this.topic)) {
         dailyResults[publishDay] = (dailyResults[publishDay] || 0) + 1;
       }
-    }
+    });
 
     return { refTotal, dailyResults };
   }
 
   build(summaryElem, diagramContainer) {
-    let currDate = new Date();
-    let stat = this._get();
-    let refCurrentDay = 0;
-    let diagramMarkup = '';
+    const currDate = new Date();
+    const stat = this._get();
+    const period = 7;
 
-    currDate.setDate(currDate.getDate() - 6);
-
-    summaryElem.querySelector('.section-content').insertAdjacentHTML('beforeend', 
+    const summaryMarkup = 
       `<h1 class="content-title content-title_summary">Вы спросили: &laquo;${this.topic}&raquo;</h1>
       <p class="summary__number-of-news">Новостей за неделю: <span class="text-accent">${this.numberOfNews}</span></p>
-      <p class="summary__number-of-references">Упоминаний в заголовках: <span class="text-accent">${stat.refTotal}</span></p>`);
+      <p class="summary__number-of-references">Упоминаний в заголовках: <span class="text-accent">${stat.refTotal}</span></p>`;
+    
+    let refCurrentDay = 0;
+    let rowMarkup = '';
 
-    for (let i = 0; i < 7; i++) {    
+    currDate.setDate(currDate.getDate() - period + 1);
+
+    summaryElem.querySelector('.section-content').insertAdjacentHTML('beforeend', this._sanitize(summaryMarkup));
+
+    for (let i = 0; i < period; i++) {    
       refCurrentDay = (stat.dailyResults[currDate.getDate()] || 0);
 
-      diagramMarkup += `<div class="diagram__row">
+      rowMarkup += 
+        `<div class="diagram__row">
           <p class="diagram__row-name">${currDate.toLocaleString('ru', { weekday: 'short', month: '2-digit', day: 'numeric' })}</p>
           <div class="diagram__bar" style="width: ${refCurrentDay}%;">
             <p>${refCurrentDay}</p>
@@ -53,7 +61,7 @@ export class Statistics {
       currDate.setDate(currDate.getDate() + 1);
     }
     
-    diagramContainer.insertAdjacentHTML('afterend', diagramMarkup);
+    diagramContainer.insertAdjacentHTML('afterend', this._sanitize(rowMarkup));
   }
   
 }

@@ -1,18 +1,18 @@
 import { BaseComponent } from './BaseComponent.js';
 
 export class SearchInput extends BaseComponent {
-  constructor(eventHandlers, form, inputElem, submitBtn) {
-    super(eventHandlers);
+  constructor(eventHandlers, divElement, form, inputElem, submitBtn) {
+    super(eventHandlers, divElement);
     this.form = form;
     this.inputElem = inputElem;
     this.submitBtn = submitBtn;
 
-    this.find = this.find.bind(this);
+    this.initialize = this.initialize.bind(this);
     this.checkValidity = this.checkValidity.bind(this);
   }
 
-  find() {
-    this.inputElem.value = '';
+  initialize(initFunc) {
+    initFunc();
     this._setHandlers(this.form);
   }
 
