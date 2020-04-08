@@ -14,7 +14,7 @@ export class Statistics extends BaseComponent {
     let refTotal = 0;
     let dailyResults = {};
 
-    this.articles.forEach((item) => {
+    this.articles.forEach(item => {
       let publishDate = new Date(Date.parse(item.publishedAt));
       let publishDay = publishDate.getDate();
 
@@ -34,14 +34,13 @@ export class Statistics extends BaseComponent {
     const currDate = new Date();
     const stat = this._get();
     const period = 7;
-
     const summaryMarkup = 
       `<h1 class="content-title content-title_summary">Вы спросили: &laquo;${this.topic}&raquo;</h1>
       <p class="summary__number-of-news">Новостей за неделю: <span class="text-accent">${this.numberOfNews}</span></p>
       <p class="summary__number-of-references">Упоминаний в заголовках: <span class="text-accent">${stat.refTotal}</span></p>`;
     
     let refCurrentDay = 0;
-    let rowMarkup = '';
+    let rowsMarkup = '';
 
     currDate.setDate(currDate.getDate() - period + 1);
 
@@ -50,10 +49,11 @@ export class Statistics extends BaseComponent {
     for (let i = 0; i < period; i++) {    
       refCurrentDay = (stat.dailyResults[currDate.getDate()] || 0);
 
-      rowMarkup += 
+      rowsMarkup += 
         `<div class="diagram__row">
           <p class="diagram__row-name">${currDate.toLocaleString('ru', { weekday: 'short', month: '2-digit', day: 'numeric' })}</p>
-          <div class="diagram__bar" style="width: ${refCurrentDay}%;">
+          <div class="diagram__row-content">
+            <div class="diagram__bar" style="width: ${refCurrentDay}%"></div>
             <p>${refCurrentDay}</p>
           </div>
         </div>`
@@ -61,7 +61,7 @@ export class Statistics extends BaseComponent {
       currDate.setDate(currDate.getDate() + 1);
     }
     
-    diagramContainer.insertAdjacentHTML('afterend', this._sanitize(rowMarkup));
+    diagramContainer.insertAdjacentHTML('beforeend', this._sanitize(rowsMarkup));
   }
   
 }

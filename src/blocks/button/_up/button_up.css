@@ -1,0 +1,15 @@
+.button_up {
+  width: 120px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 80px;
+  position: fixed;
+  right: 40px;
+  bottom: 60px;
+  display: none;
+}
+
+.button_up:hover {
+  transform: translate(0, -5px);
+}

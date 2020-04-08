@@ -5,7 +5,7 @@ export class NewsApi {
         this.getNews = this.getNews.bind(this);
     }
 
-    getNews(keyword, date, callbackFunc, errorFunc) {
+    getNews(keyword, date) {
         return fetch('https://newsapi.org/v2/everything?' +
             `q=${keyword}&` +
             `from=${date}&` +
@@ -18,11 +18,6 @@ export class NewsApi {
             }
             return Promise.reject(`${res.status} ${res.statusText}`);
         })
-        .then(data => {
-            callbackFunc(data);
-        })
-        .catch(err => {
-            errorFunc(err);
-        })
+        .catch(err => err)
     }
 }

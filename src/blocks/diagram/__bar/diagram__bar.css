@@ -1,11 +1,4 @@
 .diagram__bar {
     margin: 0;
     background-color: #2F71E5;
-    color: #F5F6F7;
-}
-
-.diagram__bar p {
-    margin-left: 6px;   
-    margin-top: 0;
-    margin-bottom: 0; 
 }

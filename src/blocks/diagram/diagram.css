@@ -1,8 +1,8 @@
 @import url(./__bar/diagram__bar.css);
 @import url(./__column-name/diagram__column-name.css);
 @import url(./__columns/diagram__columns.css);
-@import url(./__month/diagram__month.css);
 @import url(./__row/diagram__row.css);
+@import url(./__row-content/diagram__row-content.css);
 @import url(./__row-name/diagram__row-name.css);
 @import url(./__scale/diagram__scale.css);
 
