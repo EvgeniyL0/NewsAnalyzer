@@ -18,6 +18,6 @@ export class BaseComponent {
   _sanitize(markup) {
     const temp = this.divElement;
     temp.textContent = markup;
-    return temp.textContent;
+    return temp.innerHTML;
   }
 }

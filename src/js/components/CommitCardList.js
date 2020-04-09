@@ -1,8 +1,5 @@
-import { BaseComponent } from './BaseComponent.js';
-
-export class CommitCardList extends BaseComponent {
-  constructor(eventHandlers, divElement, commitsContainer) {
-    super(eventHandlers, divElement);
+export class CommitCardList {
+  constructor(commitsContainer) {
     this.commitsContainer = commitsContainer;
 
     this.renderCommitsList = this.renderCommitsList.bind(this);
@@ -16,6 +13,6 @@ export class CommitCardList extends BaseComponent {
       commitsMarkup += createCommitMethod(commitsArray[i]);
     }
 
-    this.commitsContainer.insertAdjacentHTML('beforeend', this._sanitize(commitsMarkup));
+    this.commitsContainer.insertAdjacentHTML('beforeend', commitsMarkup);
   }
 }

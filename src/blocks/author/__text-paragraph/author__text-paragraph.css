@@ -1,0 +1,8 @@
+.author__text-paragraph {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.author__text-paragraph:last-of-type {
+  margin-bottom: 0;
+}

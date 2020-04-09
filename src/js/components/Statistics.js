@@ -18,11 +18,11 @@ export class Statistics extends BaseComponent {
       let publishDate = new Date(Date.parse(item.publishedAt));
       let publishDay = publishDate.getDate();
 
-      if (item.title.toLowerCase().includes(this.topic)) {
+      if (item.title.toLowerCase().includes(this.topic.toLowerCase())) {
         refTotal += 1;
       }
   
-      if (item.title.toLowerCase().includes(this.topic) || item.description.toLowerCase().includes(this.topic)) {
+      if (item.title.toLowerCase().includes(this.topic.toLowerCase()) || item.description.toLowerCase().includes(this.topic.toLowerCase())) {
         dailyResults[publishDay] = (dailyResults[publishDay] || 0) + 1;
       }
     });
@@ -36,7 +36,7 @@ export class Statistics extends BaseComponent {
     const period = 7;
     const summaryMarkup = 
       `<h1 class="content-title content-title_summary">Вы спросили: &laquo;${this.topic}&raquo;</h1>
-      <p class="summary__number-of-news">Новостей за неделю: <span class="text-accent">${this.numberOfNews}</span></p>
+      <p class="summary__number-of-news">Новостей за неделю: <span class="text-accent">${this._sanitize(this.numberOfNews)}</span></p>
       <p class="summary__number-of-references">Упоминаний в заголовках: <span class="text-accent">${stat.refTotal}</span></p>`;
     
     let refCurrentDay = 0;
@@ -44,7 +44,7 @@ export class Statistics extends BaseComponent {
 
     currDate.setDate(currDate.getDate() - period + 1);
 
-    summaryElem.querySelector('.section-content').insertAdjacentHTML('beforeend', this._sanitize(summaryMarkup));
+    summaryElem.querySelector('.section-content').insertAdjacentHTML('beforeend', summaryMarkup);
 
     for (let i = 0; i < period; i++) {    
       refCurrentDay = (stat.dailyResults[currDate.getDate()] || 0);
@@ -61,7 +61,7 @@ export class Statistics extends BaseComponent {
       currDate.setDate(currDate.getDate() + 1);
     }
     
-    diagramContainer.insertAdjacentHTML('beforeend', this._sanitize(rowsMarkup));
+    diagramContainer.insertAdjacentHTML('beforeend', rowsMarkup);
   }
   
 }

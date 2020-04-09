@@ -38,7 +38,7 @@ const search = new SearchInput(
     document.createElement('div'),
 );
 const requestNews = new NewsApi(API_KEY);
-const card = new NewsCard();
+const card = new NewsCard([], document.createElement('div'));
 const resultsList = new NewsCardList(
     [{
         target: moreButton,
@@ -59,26 +59,22 @@ function showLoading() {
     searchFormSubmit.setAttribute('disabled', '');
 }
 
-function showResults(isFound) {
+function showResults(isFound, errorText) {
     loadingSection.style.display = 'none';
     searchFormInput.removeAttribute('disabled');
     searchFormSubmit.removeAttribute('disabled');
     if (isFound) {
         newsCardsSection.style.display = 'block';
-        resultsSection.style.display = 'block';
-    } else {
-        notFoundTitle.textContent = 'Ничего не найдено';
-        notFoundSubtitle.textContent = 'К сожалению по вашему запросу ничего не найдено';
-        notFoundSection.style.display = 'flex';
+        return;
     }
-}
-
-function showError(errorText) {
-    loadingSection.style.display = 'none';
-    searchFormInput.removeAttribute('disabled');
-    searchFormSubmit.removeAttribute('disabled');
-    notFoundTitle.textContent = 'Что-то пошло не так...';
-    notFoundSubtitle.textContent = errorText;
+    if (errorText) {
+        notFoundTitle.textContent = 'Что-то пошло не так...';
+        notFoundSubtitle.textContent = errorText;
+        notFoundSection.style.display = 'flex';
+        return;
+    }
+    notFoundTitle.textContent = 'Ничего не найдено';
+    notFoundSubtitle.textContent = 'К сожалению по вашему запросу ничего не найдено';
     notFoundSection.style.display = 'flex';
 }
 
@@ -98,6 +94,7 @@ function firstBoot() {
             ),
             moreButton
         );
+        resultsSection.style.display = 'block';
         showResults(true);
     } else {
         searchFormInput.value = '';
@@ -110,33 +107,33 @@ function sendRequest() {
 
     startDate.setDate(startDate.getDate() - period + 1);
     storage.clear();
+    resultsSection.style.display = 'block';
     showLoading();
     requestNews.getNews(searchFormInput.value, `${startDate.getFullYear()}-${startDate.getMonth() + 1}-${startDate.getDate()}`)
         .then(data => {
-            if (typeof data === 'string') {
-                showError(data);
+            if (data.articles.length !== 0) {
+                storage.write('topic', searchFormInput.value);
+                storage.write('response', data);
+                resultsList.renderCardList(
+                    true,
+                    storage.read('response').articles,
+                    article => card.create(
+                        cutDown(article.title, 100),
+                        cutDown(article.description, 100),
+                        dateConversion(article.publishedAt),
+                        article.source.name,
+                        article.urlToImage,
+                        article.url
+                    ),
+                    moreButton
+                );
+                showResults(true);
             } else {
-                if (data.articles.length !== 0) {
-                    storage.write('topic', searchFormInput.value);
-                    storage.write('response', data);
-                    resultsList.renderCardList(
-                        true,
-                        storage.read('response').articles,
-                        article => card.create(
-                            cutDown(article.title, 100),
-                            cutDown(article.description, 100),
-                            dateConversion(article.publishedAt),
-                            article.source.name,
-                            article.urlToImage,
-                            article.url
-                        ),
-                        moreButton
-                    );
-                    showResults(true);
-                } else {
-                    showResults(false);
-                }
+                showResults(false);
             }
+        })
+        .catch(err => {
+            showResults(false, err);
         })
 }
 
@@ -156,7 +153,8 @@ function clickMoreButtonHandler(event) {
             article.source.name,
             article.urlToImage,
             article.url
-        )
+        ),
+        event.target
     );
 }
 

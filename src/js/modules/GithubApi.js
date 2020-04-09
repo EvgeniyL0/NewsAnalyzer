@@ -13,6 +13,5 @@ export class GithubApi {
         }
         return Promise.reject(`${res.status} ${res.statusText}`);
       })
-      .catch(err => err)
   }
 }

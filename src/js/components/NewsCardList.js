@@ -12,6 +12,7 @@ export class NewsCardList extends BaseComponent {
 
   renderCardList(isFirst, arrayOfArticles, createCardMethod, showMoreButton) {
     const copyOfContainer = this.cardsContainer.cloneNode(false);
+    const numberOfItems = 3;
     let threeCardsMarkup = '';
     
     if (isFirst) {
@@ -22,7 +23,7 @@ export class NewsCardList extends BaseComponent {
       showMoreButton.style.display = 'block';
       this._setHandlers(showMoreButton);
     }
-    for (let i = this._startPosition; i < this._startPosition + 3; i++) {;
+    for (let i = this._startPosition; i < this._startPosition + numberOfItems; i++) {;
       if (arrayOfArticles[i] === undefined) {
         break;
       }
@@ -32,7 +33,7 @@ export class NewsCardList extends BaseComponent {
       }
       threeCardsMarkup += createCardMethod(arrayOfArticles[i]);
     }
-    this.cardsContainer.insertAdjacentHTML('beforeend', this._sanitize(threeCardsMarkup));
-    this._startPosition += 3;
+    this.cardsContainer.insertAdjacentHTML('beforeend', threeCardsMarkup);
+    this._startPosition += numberOfItems;
   }
 }
