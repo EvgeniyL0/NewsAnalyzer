@@ -2,12 +2,6 @@ import './pages/index.css';
 import './images/favicon.png';
 import './images/search-back.png';
 import './images/not-found.svg';
-<<<<<<< HEAD
-import './images/sample.jpg';
-import './images/author.jpg';
-import './images/fb-icon.svg';
-import './images/github-icon.svg';
-=======
 import './images/author.jpg';
 import './images/fb-icon.svg';
 import './images/github-icon.svg';
@@ -177,4 +171,3 @@ window.addEventListener('scroll', () => {
         upButton.style.display = 'block';
     }
 });
->>>>>>> level-2
