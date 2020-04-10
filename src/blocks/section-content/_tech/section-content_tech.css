@@ -1,5 +1,6 @@
 .section-content_tech {
     display: flex;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 1303px) {

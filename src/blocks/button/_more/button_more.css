@@ -1,5 +1,5 @@
 .button_more {
-  display: block;
+  display: none;
   width: 288px;
   margin-left: auto;
   margin-right: auto;
@@ -9,7 +9,11 @@
 }
 
 .button_more:hover {
+<<<<<<< HEAD
   opacity: 0.9;
+=======
+  background-color: #f0f0f0;
+>>>>>>> level-2
 }
 
 @media screen and (max-width: 768px) {

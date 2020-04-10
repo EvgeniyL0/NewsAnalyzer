@@ -1,0 +1,11 @@
+.diagram__row-content {
+  margin: 0;
+  flex-grow: 2;
+  display: flex;
+}
+
+.diagram__row-content p {
+  margin: 0;
+  padding-left: 3px;
+  color: #1A1B22;
+}

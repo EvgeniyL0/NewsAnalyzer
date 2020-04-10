@@ -27,9 +27,15 @@
         <p class="content-subtitle content-subtitle_search">Введите в поиске любую тему и узнайте, насколько популярной
           она была в новостях за
           прошедшую неделю.</p>
+<<<<<<< HEAD
         <form class="search__form" name="search">
           <input type="text" class="search__input" name="topic" placeholder="Введите тему новости" required>
           <button type="submit" class="button button_search">Искать</button>
+=======
+        <form class="search__form" name="search" novalidate>
+          <input type="text" class="search__input" name="topic" placeholder="Введите тему новости" required>
+          <button type="submit" class="button button_search" name="submit">Искать</button>
+>>>>>>> level-2
         </form>
       </div>
     </section>
@@ -37,10 +43,19 @@
       <div class="section-content">
         <div class="results__loading">
           <div class="loader"></div>
+<<<<<<< HEAD
           <p class="content-subtitle content-subtitle_load">Идёт загрузка...</p>
           <img src="./images/not-found.svg" alt="Не найдено" class="results__not-found-image">
           <h2 class="content-title content-title_load">Ничего не найдено</h2>
           <p class="content-subtitle content-subtitle_load">К сожалению по вашему запросу ничего не найдено</p>
+=======
+          <p class="content-subtitle content-subtitle_loading">Идёт загрузка...</p>
+        </div>
+        <div class="results__not-found">
+          <img src="./images/not-found.svg" alt="Не найдено" class="results__not-found-image">
+          <h2 class="content-title content-title_loading"></h2>
+          <p class="content-subtitle content-subtitle_loading"></p>
+>>>>>>> level-2
         </div>
         <div class="results__wrapper">
           <div class="section-header">
@@ -92,10 +107,17 @@
         <img src="./images/author.jpg" alt="Фото автора" class="author__photo">
         <div class="author__about">
           <h2 class="content-title content-title_author">Об авторе</h2>
-          <p class="author__about-text">Это блок с описаением автора проекта.</p>
+          <div class="author__about-text">
+            <p class="author__text-paragraph">Я Евгений Лобанов - начинающий фронтенд-разработчик.</p>
+            <p class="author__text-paragraph">Этот сайт - мой дипломный проект в Яндекс.Практикум.</p>
+            <p class="author__text-paragraph">По образованию я инженер-электроник. Семь месяцев назад решил освоить
+              новую профессию и стать фронтендером. Обучение в Яндекс.Практикум помогло мне овладеть основными
+              технологиями и инструментами для создания современных сайтов.</p>
+          </div>
         </div>
       </div>
     </section>
+    <button class="button button_up">Наверх</button>
     <footer class="footer">
       <p class="footer__copyright">&copy; 2020 Supersite</p>
       <ul class="footer__links">

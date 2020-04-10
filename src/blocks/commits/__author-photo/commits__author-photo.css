@@ -5,6 +5,7 @@
   object-fit: cover;
   border-radius: 100%;
   background-color: #F5F6F7;
+  flex-shrink: 0;
 }
 
 @media screen and (max-width: 425px) {

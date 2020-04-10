@@ -1,8 +1,14 @@
 .content-title_author {
-  margin-top: 51px;
+  margin-top: 50px;
   margin-bottom: 24px;
   font-size: 40px;
   line-height: 46px;
+}
+
+@media screen and (max-width: 1024px) {
+  .content-title_author {
+    margin-top: 20px;
+  }  
 }
 
 @media screen and (max-width: 768px) {

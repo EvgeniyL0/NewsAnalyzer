@@ -1,4 +1,5 @@
-@import url(./_load/content-subtitle_load.css);
+@import url(./_commits/content-subtitle_commits.css);
+@import url(./_loading/content-subtitle_loading.css);
 @import url(./_search/content-subtitle_search.css);
 
 .content-subtitle {

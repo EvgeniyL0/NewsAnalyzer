@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url(./_day/diagram__row-name_day_1.css);
 @import url(./_day/diagram__row-name_day_2.css);
 @import url(./_day/diagram__row-name_day_3.css);
@@ -6,6 +7,8 @@
 @import url(./_day/diagram__row-name_day_6.css);
 @import url(./_day/diagram__row-name_day_7.css);
 
+=======
+>>>>>>> level-2
 .diagram__row-name {
     width: 104px;
     margin: 0;
@@ -17,5 +20,6 @@
 @media screen and (max-width: 425px) {
     .diagram__row-name {
         width: 80px;
+        font-size: 12px;
     }
 }

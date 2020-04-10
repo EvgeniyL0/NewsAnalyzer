@@ -8,4 +8,9 @@
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/diagram/diagram.css);
 @import url(../blocks/content-title/content-title.css);
+<<<<<<< HEAD
 @import url(../blocks/path/path.css);
+=======
+@import url(../blocks/path/path.css);
+@import url(../blocks/text-accent/text-accent.css);
+>>>>>>> level-2

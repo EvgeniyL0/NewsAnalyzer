@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url(./_day/diagram__bar_day_1.css);
 @import url(./_day/diagram__bar_day_2.css);
 @import url(./_day/diagram__bar_day_3.css);
@@ -6,8 +7,9 @@
 @import url(./_day/diagram__bar_day_6.css);
 @import url(./_day/diagram__bar_day_7.css);
 
+=======
+>>>>>>> level-2
 .diagram__bar {
     margin: 0;
     background-color: #2F71E5;
-    color: white;
 }
