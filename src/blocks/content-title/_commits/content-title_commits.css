@@ -7,3 +7,10 @@
   line-height: 30px;
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .content-title_commits {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}

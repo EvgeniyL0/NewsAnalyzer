@@ -11,3 +11,15 @@
         height: 196px;
     } 
 }
+
+@media screen and (max-width: 680px) {
+    .card__image {
+        height: 272px;
+    } 
+}
+
+@media screen and (max-width: 425px) {
+    .card__image {
+        height: 196px;
+    } 
+}

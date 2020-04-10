@@ -8,7 +8,7 @@ import './images/github-icon.svg';
 import { NewsApi } from './js/modules/NewsApi.js';
 import { NewsCard } from './js/components/NewsCard.js';
 import { NewsCardList } from './js/components/NewsCardList.js';
-import { dateConversion, cutDown } from './js/utils/stringConversion.js';
+import { dateConversion } from './js/utils/stringConversion.js';
 import { API_KEY } from './js/constants/constants.js';
 import { SearchInput } from './js/components/SearchInput';
 import { DataStorage } from './js/modules/DataStorage.js';
@@ -85,8 +85,8 @@ function firstBoot() {
             true,
             storage.read('response').articles,
             article => card.create(
-                cutDown(article.title, 100),
-                cutDown(article.description, 100),
+                article.title,
+                article.description,
                 dateConversion(article.publishedAt),
                 article.source.name,
                 article.urlToImage,
@@ -118,8 +118,8 @@ function sendRequest() {
                     true,
                     storage.read('response').articles,
                     article => card.create(
-                        cutDown(article.title, 100),
-                        cutDown(article.description, 100),
+                        article.title,
+                        article.description,
                         dateConversion(article.publishedAt),
                         article.source.name,
                         article.urlToImage,
@@ -147,8 +147,8 @@ function clickMoreButtonHandler(event) {
         false,
         storage.read('response').articles,
         article => card.create(
-            cutDown(article.title, 100),
-            cutDown(article.description, 100),
+            article.title,
+            article.description,
             dateConversion(article.publishedAt),
             article.source.name,
             article.urlToImage,

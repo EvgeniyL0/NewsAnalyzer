@@ -1,13 +1,13 @@
 .card__description {
   width: 88%;
-  min-height: 260px;
+  height: 260px;
   margin-left: auto;
-  margin-top: 20px;
+  margin-top: 0;
   margin-right: auto;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  overflow: auto;
 }
 
 @media screen and (max-width: 768px) {

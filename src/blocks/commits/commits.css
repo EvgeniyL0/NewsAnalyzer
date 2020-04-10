@@ -18,6 +18,8 @@
     margin-right: 10px;
     border-radius: 16px;
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
   
 @media screen and (max-width: 768px) {
