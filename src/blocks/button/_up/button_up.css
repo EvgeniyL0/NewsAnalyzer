@@ -13,3 +13,9 @@
 .button_up:hover {
   transform: translate(0, -5px);
 }
+
+@media screen and (max-width: 768px) {
+  .button_up {
+    bottom: 40px;
+  }
+}

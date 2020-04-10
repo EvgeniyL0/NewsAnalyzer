@@ -3,13 +3,4 @@
     margin-bottom: 4px;
     font-size: 18px;
     line-height: 24px;
-<<<<<<< HEAD
-}
-
-.summary__number-of-news::after {
-    content: '34 342';
-    font-family: 'Roboto', Arial, sans-serif;
-    font-weight: 700;
-=======
->>>>>>> level-2
 }

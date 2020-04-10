@@ -2,13 +2,4 @@
     margin: 0;
     font-size: 18px;
     line-height: 24px;
-<<<<<<< HEAD
-}
-
-.summary__number-of-references::after {
-    content: '235';
-    font-family: 'Roboto', Arial, sans-serif;
-    font-weight: 700;
-=======
->>>>>>> level-2
 }
