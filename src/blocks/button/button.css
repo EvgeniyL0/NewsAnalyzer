@@ -11,6 +11,10 @@
   cursor: pointer;
 }
 
+.button:focus {
+  outline-color: #347EFF;
+}
+
 @media screen and (max-width: 768px) {
   .button {
     height: 56px;
