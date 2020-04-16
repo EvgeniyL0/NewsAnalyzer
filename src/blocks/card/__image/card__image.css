@@ -1,25 +1,66 @@
 .card__image {
     width: 100%;
     height: 272px;
+    display: block;
+    position: relative;
     object-fit: cover;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
 }
 
+.card__image::before {
+    content: '';
+    width: 100%;
+    height: 272px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.card__image::after {
+    content: 'Не удалось загрузить изображение :(';
+    width: 50%;
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    color: #B6BCBF;
+}
+
+
 @media screen and (max-width: 1024px) {
     .card__image {
         height: 196px;
-    } 
+    }
+
+    .card__image::before {
+        height: 196px;
+    }
 }
 
 @media screen and (max-width: 680px) {
     .card__image {
         height: 272px;
-    } 
+    }
+
+    .card__image::before {
+        height: 272px;
+    }
 }
 
 @media screen and (max-width: 425px) {
     .card__image {
         height: 196px;
-    } 
+    }
+
+    .card__image::before {
+        height: 196px;
+    }
 }
