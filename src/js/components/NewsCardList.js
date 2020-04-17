@@ -1,25 +1,21 @@
 import { BaseComponent } from './BaseComponent.js';
 
 export class NewsCardList extends BaseComponent {
-  constructor(eventHandlers, divElement, cardsContainer, previousElem) {
+  constructor(eventHandlers, divElement, cardsContainer) {
     super(eventHandlers, divElement);
     this.cardsContainer = cardsContainer;
-    this.previousElem = previousElem;
     this._startPosition = 0;
 
     this.renderCardList = this.renderCardList.bind(this);
   }
 
   renderCardList(isFirst, arrayOfArticles, createCardMethod, showMoreButton) {
-    const copyOfContainer = this.cardsContainer.cloneNode(false);
     const numberOfItems = 3;
     let threeCardsMarkup = '';
     
     if (isFirst) {
-      this.cardsContainer.replaceWith('');
+      this.cardsContainer.innerHTML = '';
       this._startPosition = 0;
-      this.cardsContainer = copyOfContainer;
-      this.previousElem.after(this.cardsContainer);
       showMoreButton.style.display = 'block';
       this._setHandlers(showMoreButton);
     }
