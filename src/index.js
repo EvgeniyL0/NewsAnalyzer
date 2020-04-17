@@ -16,8 +16,8 @@ import { DataStorage } from './js/modules/DataStorage.js';
 const resultsSection = document.querySelector('.results');
 const loadingSection = document.querySelector('.results__loading');
 const notFoundSection = document.querySelector('.results__not-found');
-const notFoundTitle = notFoundSection.querySelector('.content-title_loading');
-const notFoundSubtitle = notFoundSection.querySelector('.content-subtitle_loading');
+const notFoundTitle = notFoundSection.querySelector('.content-title_results');
+const notFoundSubtitle = notFoundSection.querySelector('.content-subtitle_results');
 const newsCardsSection = document.querySelector('.results__wrapper');
 const moreButton = document.querySelector('.button_more');
 const upButton = document.querySelector('.button_up');
@@ -46,8 +46,7 @@ const resultsList = new NewsCardList(
         handler: clickMoreButtonHandler
     }],
     document.createElement('div'),
-    document.querySelector('.results__news-cards'),
-    document.querySelector('.section-header')
+    document.querySelector('.results__news-cards')
 );
 const storage = new DataStorage();
 
@@ -94,8 +93,8 @@ function firstBoot() {
             ),
             moreButton
         );
-        resultsSection.style.display = 'block';
         showResults(true);
+        resultsSection.style.display = 'block';
     } else {
         searchFormInput.value = '';
     }
@@ -107,8 +106,8 @@ function sendRequest() {
 
     startDate.setDate(startDate.getDate() - period + 1);
     storage.clear();
-    resultsSection.style.display = 'block';
     showLoading();
+    resultsSection.style.display = 'block';
     requestNews.getNews(searchFormInput.value, `${startDate.getFullYear()}-${startDate.getMonth() + 1}-${startDate.getDate()}`)
         .then(data => {
             if (data.articles.length !== 0) {
