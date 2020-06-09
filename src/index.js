@@ -9,7 +9,7 @@ import { NewsApi } from './js/modules/NewsApi.js';
 import { NewsCard } from './js/components/NewsCard.js';
 import { NewsCardList } from './js/components/NewsCardList.js';
 import { dateConversion } from './js/utils/stringConversion.js';
-import { API_KEY } from './js/constants/constants.js';
+import { API_KEY, URL_NEWS } from './js/constants/constants.js';
 import { SearchInput } from './js/components/SearchInput';
 import { DataStorage } from './js/modules/DataStorage.js';
 
@@ -37,7 +37,7 @@ const search = new SearchInput(
     }],
     document.createElement('div'),
 );
-const requestNews = new NewsApi(API_KEY);
+const requestNews = new NewsApi(API_KEY, URL_NEWS);
 const card = new NewsCard([], document.createElement('div'));
 const resultsList = new NewsCardList(
     [{

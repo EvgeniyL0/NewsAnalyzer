@@ -1,12 +1,13 @@
 export class NewsApi {
-  constructor(apiToken) {
+  constructor(apiToken, newsUrl) {
       this.apiToken = apiToken;
+      this.newsUrl = newsUrl;
       
       this.getNews = this.getNews.bind(this);
   }
 
   getNews(keyword, date) {
-      return fetch('https://newsapi.org/v2/everything?' +
+      return fetch(`${this.newsUrl}` +
           `q=${keyword}&` +
           `from=${date}&` +
           'sortBy=publishedAt&' +
